@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크</title>
+
+    <style>
+        #wh {
+            width: 30%;
+            height: 300px;
+        }
+        #naver{
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    하이퍼링크 태그 : a
+        문자열이나 이미지를 클릭하면 원하는 웹페이지로 이동하는 태그
+        href : 이동할 페이지 경로, url, img, video, text, 음원 파일 경로 등등...
+                상대경로, 절대경로, url도 가능함
+        target : 페이지 이동시 출력할 대상을 결정하는 속성
+            _self : 현재 탭에 출력
+            _blank : 새로운 탭에 출력
+        title : 툴팁으로 출력할 문자열
+    -->
+    <a href="/Step01/person_info.html">info페이지 이동</a>
+    <hr>
+    <a href="/Step01/person_info.html" target="_blank">info페이지 이동</a>
+    <hr>
+    <img id="wh" src="/resource/img/metamong.jpg" alt="metamong">
+    <hr>
+    <!-- 이동할 페이지로 이미지 파일 지정 -->
+    <a href="/resource/img/metamong.jpg" title="halloween.jpg로 이동">
+        <img id="wh" src="/resource/img/metamong.jpg" alt="metamong" 
+        onclick="alert('정말 이동하시겠습니까?')">
+    </a>
+
+    <!-- 동영상 파일로 이동하는 링크 작성, 새탭에서 열기 -->
+     <a href="/resource/video/191159-889246512_tiny.mp4" target="_blank">무슨영상일까?</a>
+
+     <!-- 네이버로 이동 -->
+      <a href="https://naver.com" target="_blank">
+        <img id="naver"src="/resource/icon/homeICON.png" alt="">
+    </a>
+</body>
+
+</html>

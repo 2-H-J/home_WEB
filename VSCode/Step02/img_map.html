@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지맵</title>
+
+</head>
+
+    <img src="/Step02/img/image.png" usemap="#img_map">
+    <map name="img_map">
+        <!-- 
+        사각형은 좌상단, 우하단 좌표값을 넣어 처리
+        shape ="모양"
+        rect : 사각형 
+        -->
+        <!--              좌상단 : 41,67 , 우하단 : 536,378 -->
+        <area shape="rect" coords="41,67,536,378" href="https://naver.com" target="_blank">
+        <!-- 원, 중심좌표 , 반지름 -->
+         <area shape="circle" coords="1050,225,135" href="https://daum.net" target="_blank">
+
+         <!-- 다각형은 시계방향으로 각 꼭지점 좌표값1x,좌표값1y,좌표값2x,좌표값2y,..... -->
+         <area shape="poly" coords="755,504,906,619,851,807,657,807,602,619" 
+         href="https://www.google.com" target="_blank">
+    </map>
+    <hr>
+    <img src="/Step02/img/img_map.png" usemap="#sns_map">
+    <map name="sns_map">
+       <!-- YouTube (사각형) -->
+       <area shape="rect" coords="16,20,144,49" href="https://www.youtube.com" alt="YouTube" target="_blank">
+        
+       <!-- Naver (원형) -->
+       <area shape="circle" coords="83,150,62" href="https://www.naver.com" alt="Naver" target="_blank">
+       
+       <!-- KakaoTalk (원형) -->
+       <area shape="circle" coords="264,102,62" href="https://www.kakao.com" alt="KakaoTalk" target="_blank">
+       
+       <!-- Facebook (사각형) -->
+       <area shape="rect" coords="398,35,515,60" href="https://www.facebook.com" alt="Facebook" target="_blank">
+       
+       <!-- Twitter (사각형) -->
+       <area shape="poly" coords="403,99,396,106,391,117,391,206,396,217,404,224,410,224,502,
+       224,513,217,517,208,517,201,519,187,519,116,514,106,505,98,411,97" 
+       href="https://www.twitter.com" alt="Twitter" target="_blank">
+    </map>
+
+</body>
+</html>

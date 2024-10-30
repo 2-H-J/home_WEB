@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지</title>
+</head>
+
+<body>
+    <!-- 상대 경로 (Relative Path) : 
+         현재 HTML파일을 기준으로 해당 파일에 접하는 경로 -->
+
+    <!-- src : 이미지 경로, alt : 대체 텍스트 -->
+    <img src="img/Dogimg.jpg" alt="고양이 이미지">
+    <hr>
+    <img src="img/Dogimg.jpg" alt="대체 텍스트" width="500" height="500">
+    <!--  width="500":이미지 가로길이, height="500":세로길이 - 픽셀단위 
+        가로나 세로 길이 하나만 지정하면, 나머지 다른 방향 길이는 비율에 맞춰서 자동조정  
+    -->
+    <hr>
+    <img src="img/Dogimg.jpg" alt="대체" height="500">
+
+    <!-- ..은 상위 폴더로 이동한다는 의미 -->
+    <!-- 새로 받은 이미지를 출력 -->
+    <!-- . 은 현재 폴더를 의미-->
+    <img src="../resource/img/metamong.jpg" alt="메타~" width="200">
+    <img src="./img/Dogimg.jpg" alt="개" width="300">
+
+    <!-- 절대 경로 (Absolute Path) : 
+     현재 파일 시스템(또는 웹서버에서 지정한 폴더)에서 
+     ROOT폴더 기준으로 원하는 해당 경로까지 접근하는 방법 -->
+    <img src="/Step02/img/Dogimg.jpg" alt="절대경로" width="300">
+    <img src="/resource/img/metamong.jpg" alt="메타몽절대경로" width="200">
+
+    <!-- 
+        절대 경로를 쓰는 경우 
+        항상 동일한 위치에 파일을 사용할 경우(js, css, 아이콘, 로고img.....)
+
+        상대 경로를 쓰는 경우
+        프로젝트 내에서 접근할려는 경로가 유동적인 경우, 배포 환경에 따라 달라질때 사용
+      -->
+
+    <!-- 아이콘 파인더 사이트에서 홈 버튼 아이콘 하나 받아서 출력 -->
+    <img src="icon/homeICON.png" alt="집가자" width="100">
+    <!-- 이미지 주소 복사해서 적용 -->
+    <img src="https://cdn1.iconfinder.com/data/icons/unicons-line-vol-4/24/home-alt-256.png" alt="집가고 싶다" width="100">
+    <img src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png" alt="">
+
+    <hr>
+    <hr>
+    <!-- base64 방식 -->
+
+    <!-- svg 벡터그래픽 -->
+    <img src="icon/svg_icon.svg" alt="" height="300">
+    <img src="../resource/img/벡터그래픽.svg" alt="" height="300">
+
+
+
+
+
+
+</body>
+
+</html>
