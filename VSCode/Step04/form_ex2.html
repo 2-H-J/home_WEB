@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그(form)</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <p>input checkbox</p>
+        <!--
+        id값 : 태그를 연결하는 속성값
+        label : 체크박스 글자를 눌러도 체크가 적용 되게 input에 id를 줘서 label의 for에 입력
+        -input type
+            checked : 체크박스 체크를 미리 선택
+            radio : 같은 name 값을 준 radio 체크박스는 한가지만 선택 가능하다
+            file : 파일등록,적용
+            date : 
+            time : 
+
+        -select 드롭다운 그룹
+            option : 드롭다운, selected : 드롭다운값 미리 선택
+        -->
+        <input type="checkbox" name="hobby" value="game" id="chk1" checked>
+        <label for="chk1">게임</label>
+        <input type="checkbox" name="hobby" value="mount" id="chk2">
+        <label for="chk2">등산</label>
+        <input type="checkbox" name="hobby" value="fishing" id="chk3">
+        <label for="chk3">낚시</label>
+        <hr>
+
+        <p>input radio</p>
+        <input type="radio" name="agree" id="r1" value="y">
+        <label for="r1">예</label>
+        <input type="radio" name="agree" id="r2" value="n" checked>
+        <label for="r2">아니요</label>
+        <hr>
+
+        <p>select + option</p>
+        <select name="tel" id="">
+            <option value="A">010</option>
+            <option value="B">011</option>
+            <option value="C" selected>016</option>
+            <option value="D">017</option>
+            <option value="F">019</option>
+        </select>
+        <hr>
+        <select name="tel">
+            <option>010</option>
+            <option>011</option>
+            <option selected>016</option>
+            <option>017</option>
+            <option>019</option>
+        </select>
+        <hr>
+
+        <p>input type</p>
+        <input type="file">
+        <br>
+        <input type="date">
+        <br>
+        <input type="time">
+        <br>
+        <input type="datetime-local">
+        <br>
+        <input type="color" name="color"> <!-- color 코드로 데이터 전송 -->
+        <br>
+        <input type="range" name="range" step="10"><!-- step : 증감 값 지정 -->
+        <!-- range바 기본값 0~100(max,min,value 옵션 가능),선택된 숫자 데이터전송 -->
+
+        <hr>
+        <button>전송</button>
+    </form>
+</body>
+
+</html>

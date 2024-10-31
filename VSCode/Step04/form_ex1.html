@@ -34,6 +34,7 @@
         readonly : 텍스트 입력 불가(읽기전용), readonly를 해도 value(기본값) 설정 되어있는 값은 서버로 데이터 전송 가능
         disabled : 텍스트 입력 불가, disabled하면 서버로 데이터 전송 불가
         -->
+        <p>input type + 옵션들</p>
         <input type="text" name="string" placeholder="텍스트 입력하세요" autofocus required>
         <input type="password" name="passwd" id="" maxlength="15" minlength="5">
         <input type="date" name="date">
@@ -51,11 +52,35 @@
             reset : 폼 내용을 초기화합니다.(같은 폼태그 내에 있는 입력한 내용들 초기화)
             button : 일반 버튼으로, 별도의 동작을 수행하지 않습니다.(js(자바스크립트)로 기능을 넣고 사용 가능)
         -->
+        <p>button 태그 + type 옵션</p>
         <button type="submit">submit</button>
         <button type="reset">reset</button>
         <button type="button">button</button>
         <hr>
-        <button><img src="/resource/icon/homeICON.png" alt="홈버튼 이미지" style="height: 100px;"><br>HOME</button><!-- 이미지로 만든 버튼 -->
+        <p>img button</p>
+        <button><img src="/resource/icon/homeICON.png" alt="홈버튼 이미지"
+                style="height: 80px;"><br>HOME</button><!-- 이미지로 만든 버튼 -->
+        <hr>
+        <p>input button</p>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        <input type="button" value="button">
+        <input type="image" src="/resource/icon/8666582_chevrons_up_icon.png" style="width: 50px;">
+        <hr>
+        <!-- 
+        textarea 태그 : input와 비슷
+        - 옵션 - 
+            cols : 한줄 최대 글자 수(알파벳 기준)
+            rows : 줄 개수(모든언어적용)
+            input 옵션 적용 가능
+        -->
+        <p>textarea + 옵션</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <textarea name="" id="" cols="30" rows="10">
+            안녕하세요
+            저는 홍길동 입니다
+        </textarea>
+        <!-- 기본값을 넣을 수 있다. 단, 공백과 엔터 모두 들어가기 때문에 확인 필수 -->
     </form>
 
 </body>

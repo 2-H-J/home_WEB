@@ -8,12 +8,19 @@
 목록 순번이 있는 태그 <ol></ol> ---> start="3" 순번 시작 번호, reversed 순번을 거꾸로
 목록 순번이 없는 태그 <ul></ul>
 목록태그 항목 <li></li>
-
 이미지태그 - <img src="경로" alt="대체텍스트">
-비디오태그 - <video src="경로" contros
-오디오태그
-하이퍼링크
-
-테이블(표), iframe, 기타
-'table, tr, td, thead, tbody, tfoot, figure, figcaption, blockquote, pre'
-
+비디오태그 - <video src="경로" controls loop autoplay poster="썸네일 이미지 경로">
+오디오태그 - <audio src="경로" controls loop autoplay>
+하이퍼링크 - <a href="이동할페이지경로" target="출력위치">
+테이블 태그 - <table>
+테이블 행 - <tr>
+테이블 셀 - <td rowspan="" colspan="">
+테이블 제목셀 - <th>
+테이블 제목영역 - <thead>
+테이블 본문영역 - <tbody>
+테이블 꼬리말영역 - <tfoot>
+<caption></caption> 표 제목, 자동으로 가운데 정렬
+폼태그 <form></form>
+input 태그 <input type="text"> type에 따라 입력받는 형태가 달라짐
+    text, password, 
+button 버튼 태그

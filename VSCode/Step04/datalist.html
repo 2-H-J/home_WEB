@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist</title>
+</head>
+
+<body>
+    <!-- 
+        datalist
+    -->
+    <p>datalist + option</p>
+    <input type="text" list="hobby" name="hob">
+    <datalist id="hobby">
+        <option value="Game"></option>
+        <option value="Fishing"></option>
+        <option value="Race"></option>
+        <option value="Card"></option>
+    </datalist>
+    <hr>
+    <input type="date" list="defaultDate">
+    <datalist id="defaultDate">
+        <option value="2024-08-15"></option>
+        <option value="2024-08-16"></option>
+        <option value="2024-08-17"></option>
+    </datalist>
+    <hr>
+    <input type="month" list="defaultMonth">
+    <datalist id="defaultMonth">
+        <option value="2023-10"></option>
+        <option value="2024-11"></option>
+        <option value="2025-12"></option>
+    </datalist>
+    <hr>
+    <input type="range" min="0" max="100" list="dataRange" step="5">
+    <datalist id="dataRange">
+        <option value="0"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50"></option>
+        <option value="70"></option>
+        <option value="100"></option>
+    </datalist>
+    <hr>
+    <input type="color" list="colorList">
+    <datalist id="colorList">
+        <option value="#6799FF"></option>
+        <option value="#16D49B"></option>
+        <option value="#ABF200"></option>
+        <option value="#FF007F"></option>
+    </datalist>
+</body>
+
+</html>
