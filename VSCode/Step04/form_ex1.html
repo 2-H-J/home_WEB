@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그(form)</title>
+</head>
+
+<body>
+    <!-- 
+        form 태그 : 사용자가 입력한 데이터들을 서버로 전송해 주는 태그
+
+        action : 데이터를 전송할 서버페이지 경로
+
+        method : 데이터 전송 방식
+            get : url에 데이터를 포함해서 전송
+            post : http or https 메세지의 body에 포함해서 데이터를 전송(url에 데이터가 안나오게)
+
+        input 태그 : 사용자로부터 데이터를 직접적으로 입력받는 태그
+                        입력받는 형식을 type 속성으로 결정
+
+        name 속성 : 서버로 데이터를 보낼때, 해당 데이터가 어떤 데이터인지 알려주는 속성,
+                        속성값으로 어떤 데이터인지 서버 프로그램에서 구분함
+    -->
+    <form action="" method="get">
+        <!-- 
+        placeholder : 입력할 내용의 힌트, 입력하면 힌트는 사라진다 
+        autofocus : 웹페이지 실행시 자동으로 포커스가 해당 input 태그로 이동
+        required : 반드시 입력받아야 하는 필수 항목에 적용
+        maxlength : 최대로 입력 가능한 글자 수
+        minlength : 최소로 입력해야하는 글자 수
+        value : input 태그에 미리 입력할 값, 기본값
+        readonly : 텍스트 입력 불가(읽기전용), readonly를 해도 value(기본값) 설정 되어있는 값은 서버로 데이터 전송 가능
+        disabled : 텍스트 입력 불가, disabled하면 서버로 데이터 전송 불가
+        -->
+        <input type="text" name="string" placeholder="텍스트 입력하세요" autofocus required>
+        <input type="password" name="passwd" id="" maxlength="15" minlength="5">
+        <input type="date" name="date">
+        <input type="number" name="숫자">
+        <button>전송</button>
+        <hr>
+        <input type="text" name="test1" value="테스트readonly1">
+        <input type="text" name="test2" readonly value="테스트readonly2">
+        <input type="text" name="test3" readonly value="테스트disabled" disabled>
+        <hr>
+        <!-- 
+        button 태그
+            type="타입종류"
+            submit : 폼 태그의 내용을 제출합니다.(서버로 데이터 전송, 같은 폼태그 내에 있는 것만 + name 속성이 있는 것만)
+            reset : 폼 내용을 초기화합니다.(같은 폼태그 내에 있는 입력한 내용들 초기화)
+            button : 일반 버튼으로, 별도의 동작을 수행하지 않습니다.(js(자바스크립트)로 기능을 넣고 사용 가능)
+        -->
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+        <button type="button">button</button>
+        <hr>
+        <button><img src="/resource/icon/homeICON.png" alt="홈버튼 이미지" style="height: 100px;"><br>HOME</button><!-- 이미지로 만든 버튼 -->
+    </form>
+
+</body>
+
+</html>

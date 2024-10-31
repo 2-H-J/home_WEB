@@ -1,0 +1,19 @@
+제목태그 <h1></h1> --> h1 ~ h6, 숫자가 커질 수록 글꼴이 작아짐.
+구분선 <hr>
+문단태그 <p></p>
+줄바꿈 <br>
+글꼴 강조(굵게, 기울임꼴, 밑줄), <b>/<strong>, <i>/<em>, <u>/<ins>
+공백 &nbsp;
+카피라이트 &copy
+목록 순번이 있는 태그 <ol></ol> ---> start="3" 순번 시작 번호, reversed 순번을 거꾸로
+목록 순번이 없는 태그 <ul></ul>
+목록태그 항목 <li></li>
+
+이미지태그 - <img src="경로" alt="대체텍스트">
+비디오태그 - <video src="경로" contros
+오디오태그
+하이퍼링크
+
+테이블(표), iframe, 기타
+'table, tr, td, thead, tbody, tfoot, figure, figcaption, blockquote, pre'
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_area</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 20px;
+            font-size: 24px;
+        }
+        th{
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        body {
+            height: 3000px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- thead, tbody, tfoot : 각 영역을 나눠줌 그냥 바뀌는 점은 없지만 css, js 적용할때 편리함 -->
+    <table border="1" style="text-align:center">
+        <caption style="font-size: 15px;">표 제목</caption> <!-- caption : 표의 제목-->
+        <thead> <!-- 테이블의 제목 영역 지정 -->
+            <tr>
+                <th>이름</th> <!-- th : 테이블의 제목 셀 -->
+                <th>나이</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody> <!-- 테이블의 본문 영역 -->
+            <tr>
+                <td>홍길동</td>
+                <td>20</td>
+                <td>서울시 강서구</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>20</td>
+                <td>서울시 강서구</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>20</td>
+                <td>서울시 강서구</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- 테이블의 바닥글 영역 -->
+            <tr>
+                <td colspan="3">테이블 바닥글</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

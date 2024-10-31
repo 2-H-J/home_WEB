@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_weather</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 5px;
+            border: 2px solid black;
+        }
+
+        img {
+            width: 32px;
+        }
+
+        caption {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>날씨 예보</h1>
+    <table>
+        <caption>지역 날씨 예보</caption>
+        <thead>
+            <tr>
+                <th rowspan=" 2">지역</th>
+                <th colspan="2">27일(목)</th>
+                <th colspan="2">28일(금)</th>
+                <th colspan="2">29일(토)</th>
+            </tr>
+            <tr>
+                <td>오전</td>
+                <td>오후</td>
+                <td>오전</td>
+                <td>오후</td>
+                <td>오전</td>
+                <td>오후</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>서울<br>경기도</td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>제주도</td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather1.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+                <td><img src="/resource/img/weather2.png" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etc</title>
+    <style>
+        .progress {
+            width: 100%;
+            height: 20px;
+            background-color: #3b82f6;
+            transition: width 0.5s ease;
+        }
+
+        img {
+            width: 20%;
+        }
+        pre{
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        function startProgress() {
+            const progress = document.getElementById("myProgress");
+            let value = 0;
+
+            const interval = setInterval(() => {
+                if (value >= 100) {
+                    clearInterval(interval); // 100에 도달하면 멈춤
+                } else {
+                    value += 1; // 10씩 증가
+                    progress.value = value; // 진행률 설정
+                }
+            }, 100); // 1초마다 실행
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 진행바 html5가 생기며 추가된 태그 -->
+    <progress id="myProgress" class="progress" value="0" max="100"></progress>
+    <button onclick="startProgress()">진행 시작</button>
+    <progress value="0.5"></progress>
+    <progress value="0.8"></progress>
+    <progress value="20" max="100"></progress>
+
+    <hr>
+    <!-- 이미지 그룹 -->
+    <figure>
+        <div> <!-- div : 영역을 잡는 블록 태그 -->
+            <img src="../resource/img/metamong.jpg" alt="">
+            <img src="../resource/img/poketmon_image_1.png" alt="">
+            <img src="../resource/img/metamong.jpg" alt="">
+            <img src="../resource/img/poketmon_image_1.png" alt="">
+            <img src="../resource/img/metamong.jpg" alt="">
+            <img src="../resource/img/poketmon_image_1.png" alt="">
+            <img src="../resource/img/metamong.jpg" alt="">
+            <img src="../resource/img/poketmon_image_1.png" alt="">
+        </div>
+        <figcaption>이미지 그룹 제목</figcaption>
+    </figure>
+    <hr>
+    <blockquote cite="https://naver.com">
+        재판의 전심절차로서 행정심판을 할 수 있다. <br>행정심판의 절차는 법률로 정하되, 사법절차가 준용되어야 한다.
+        국무회의는 대통령·국무총리와 <mark>15인 이상 30인</mark> 이하의국무위원으로 구성한다.<br>
+        선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다.<br>
+        국회가 재적의원 과반수의 찬성으로 <footer> 헌법 0조 0항 <cite>출처 텍스트</cite></footer>
+    </blockquote>
+    <hr>
+    <pre>
+        헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 
+   국내법과 같은 효력을 가진다. 
+   헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. 
+   정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 
+   국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.
+    </pre>
+</body>
+
+</html>
