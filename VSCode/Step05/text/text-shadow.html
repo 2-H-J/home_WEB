@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textshadow</title>
+    <style>
+        p{
+            font-size: 3em;
+            text-shadow: -10px 15px 7px rgba(219, 3, 3, 0.8);
+            /* text-shadow : 음수~정수px(왼쪽 오른쪽 x좌표) 음수~정수px(위 아래 y좌표) 번짐정도 색상 */
+            /* 색상에 투명도(알파값)추가, 0 ~ 1 */
+        }
+
+        h2{
+            text-shadow: 0px 0px 4px #ffff00, -10px 10px 4px #dba80e,
+                        -10px -10px 4px #bc6d0c, 10px 10px 4px #ff0000, 10px -10px 4px #ff00ff;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello World</p>
+    <hr>
+    <h2>제목</h2>
+</body>
+
+</html>

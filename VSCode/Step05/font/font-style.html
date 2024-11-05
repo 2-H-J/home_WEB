@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴 스타일</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+    /* 
+        색상
+        R G B --> 2자리씩 16진수로 표현
+        html 색상표 --> #ffaa01
+
+        색상 이름이 있으면 색상이름 --> red, blue, green, ....
+
+        rgb 함수
+            rgb(0~255, 0~255, 0~255)
+                빨강    녹색   파랑
+    */
+    .color{
+        color: #ff0000;
+    }
+
+    /* 
+        텍스트에 줄긋기 속성
+        text-decoration : 선위치 선종류 선색상 선두께;
+        선 종류 : solid(실설), dotted(점선), dashed(대시선),
+                    double(이중선), wavy(물결선)
+
+        선 위치 : underline(밑줄), overline(윗줄), line-throgh(취소선), none(없음)
+
+        선 두께 : px 단위로 지정
+    */
+    a{
+        text-decoration: line-through wavy black 1px;
+    }
+
+    /* 클래스 속성값이 line에 선두께가 3px, 대쉬선의 밑줄로 선 색은 회색으로 지정 */
+    .line{
+        text-decoration: underline dashed 3px gray;
+    }
+
+    /* 글꼴을 두껍게 */
+    .bold{
+        font-weight: bold;
+    }
+
+    /* 기울임꼴 */
+    .italic{
+        font-style: italic;
+    }
+
+    /* 폰트 변경 */
+    .font{
+        font-family: 'Paperlogy 5', 'Paperlogy 3';
+        /* 
+        컴퓨터에 깔려 있는 폰트를 가져다 사용 
+        font-family : '메인폰트', '서브폰트1', '서브2', '서브3', ... */
+    }
+
+    /* 
+     @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+     @import url('font주소');로 폰트 연결하기
+    */
+    .new_font1{
+        font-family: 'East Sea Dokdo', sans-serif;
+        font-size: 50px;
+    }
+
+    /* font다운로드하여 파일로 font가져오기 */
+    @font-face {
+        font-family: 'Dokdo';
+        src: url(/resource/font/Dokdo-Regular.ttf);
+    }
+    .new_font2{
+        font-family: 'Dokdo';
+        font-size: 50px;
+    }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="color">하이퍼링크</a>
+    <p class="line">근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+    <p class="bold">모든 국민은 <span class="italic">법률</span>이 정하는 바에 의하여 국방의 의무를 진다.</p>
+    <p class="font">대법원은 <span class="italic bold line">법률</span>에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다.</p>
+    <p class="new_font1">대한민국은 민주공화국이다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.</p>
+    <hr>
+    <p class="new_font2">대한민국은 민주공화국이다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다.</p>
+
+</body>
+</html>

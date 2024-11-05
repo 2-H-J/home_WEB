@@ -43,7 +43,7 @@
     }
 
     button {
-      width: 150px;
+      width: 135px;
       padding: 10px 0px;
     }
 
@@ -53,7 +53,17 @@
     }
 
     input[name*="tel"] {
-      width: 100px;
+      width: 95px;
+      text-align: center;
+    }
+
+    input[name*="email"] {
+      width: 130px;
+      text-align: center;
+    }
+
+    select[name*="email"] {
+      width: 140px;
       text-align: center;
     }
 
@@ -92,14 +102,14 @@
           <option value="011">011</option>
           <option value="016">016</option>
         </select>
-        <input type="text">
-        <input type="text">
+        <input type="text" name="tel">
+        <input type="text" name="tel">
       </td>
     </tr>
     <tr>
       <td>이메일</td>
       <td>
-        <input type="email">@
+        <input type="email" name="email"> @
         <select name="email" id="">
           <option value="010" selected>naver.com</option>
           <option value="011">daum.net</option>
@@ -110,17 +120,18 @@
     <tr>
       <td>약관동의</td>
       <td>
-        <input type="radio" name="agree" id="r1" value="y">
+        <input type="radio" name="radio_yes" id="r1" value="y">
         <label for="r1">동의</label>
-        <input type="radio" name="agree" id="r1" value="n">
+        <input type="radio" name="radio_no" id="r2" value="n">
         <label for="r1">동의안함</label>
       </td>
     </tr>
     <tr>
-      <td colspan="2">    
-        <button>회원가입</button>    
+      <td colspan="2">
+        <button>회원가입</button>
         <button>초기화</button>
-        <button>취소</button></td>
+        <button>취소</button>
+      </td>
     </tr>
   </table>
 </body>
