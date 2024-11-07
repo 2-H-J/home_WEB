@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴바 문제</title>
+</head>
+
+<style>
+    /* 
+    항목 가로 길이 200px
+    메뉴바 길이 1000px
+    글자크기 16px
+    배경색 #ece5e5
+    */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        /* 총길이 */
+        width: 1000px;
+        margin: 30px auto;
+        /* border: 1px solid red; */
+        font-size: 0px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    li {
+        width: 200px;
+        float: left;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0px;
+        background-color: #ece5e5;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        box-sizing: border-box;
+    }
+
+    .first {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .last {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="first">홈</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">오시는길</a></li>
+            <li><a href="#" class="last">주문하기</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

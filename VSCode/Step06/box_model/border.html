@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테두리</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+    }
+    /* 
+    상하좌우 동일한 테두리 적용시 
+    border : 선두께 선종류 색상;
+    선정류 : solid, dashed, dotted, double, inset, outset
+    */
+    .border1{
+      /* border: 20px outset coral; */
+      border-width: 20px;
+      border-style: outset;
+      border-color: coral;
+      box-shadow: 10px 10px 30px 4px coral;
+    }
+
+    /* 테두리를 왼쪽에만 넣고, 두께는 10px, 선종류는 점선, 선 색상 파랑 */
+    .border2{
+      /* border-left-style: dotted;
+      border-color: blue;
+      border-width: 10px; */
+      border: 10px solid black;
+      border-left: 10px dotted blue;
+    }
+
+    /* 테두리 상하좌우 동일하게 적용 */
+    /* 선두께 5px, 선종류 실선, 색상 yellowgreen */
+    .border3{
+      border: 5px solid yellowgreen;
+      /* 테두리 둥글게 처리 */
+      border-radius: 105px;
+    }
+
+    .border4{
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 26px;
+    }
+    
+    .border5{
+      border: 1px solid black;
+      background-color: red;
+    }
+
+    .border6{
+      width: 300px;
+      height: 300px;
+      border: 1px solid cornflowerblue;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 80px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="border1"></div>
+  <hr>
+  <div class="border2"></div>
+  <hr>
+  <div class="border3"></div>
+  <hr>
+  <div class="border4"></div>
+  <hr>
+  <div class="border5"></div>
+  <hr>
+  <div class="border6"></div>
+</body>
+
+</html>

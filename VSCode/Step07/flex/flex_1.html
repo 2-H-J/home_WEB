@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>flex1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex_container {
+      width: 1200px;
+      margin: 100px auto;
+      border: 1px solid black;
+    }
+
+    .box {
+      width: 100px;
+      background-color: burlywood;
+      padding: 10px 0px;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /* -------------------------------------------------------------------------------------------------------- */
+    /* 
+    플렉스 방향(flex-direction)
+
+      플렉스 방향은 아이템들이 주축(메인 축)에서 배치되는 방향을 설정합니다.
+
+        flex-direction : 아이템의 배치 방향을 지정합니다.
+        row : 기본값으로, 아이템을 가로로(왼쪽에서 오른쪽으로) 배치합니다.
+        row-reverse : 아이템을 가로로 오른쪽에서 왼쪽으로 배치합니다.
+        column : 아이템을 세로로(위에서 아래로) 배치합니다.
+        column-reverse : 아이템을 세로로 아래에서 위로 배치합니다.
+        *아이템 : 컬럼, 컨텐츠, ...
+    */
+    /* -------------------------------------------------------------------------------------------------------- */
+    /* flex: '요소를 플렉스 컨테이너로 설정'하여 '자식 요소들 간의 정렬을 쉽게 관리'할 수 있습니다. */
+    .flex_row {
+      border: 1px solid blue;
+
+      display: flex;
+
+      /* 한줄 컬럼 정방향 */
+      flex-direction: row;
+      /* 간격 : 줄간격 열간격 */
+
+      /* 여백 */
+      margin: 20px 0px;
+
+      /* 줄과 줄사이의 간격 , 컨텐츠(컬럼)과 컨텐츠간 간격(칸) */
+      gap: 0px 10px;
+    }
+
+    /* -------------------------------------------------------------------------------------------------------- */
+    .flex_row_reverse {
+      border: 1px solid black;
+
+      display: flex;
+
+      /* 한줄 컬럼 반대로 */
+      flex-direction: row-reverse;
+
+      /* 여백 */
+      margin: 20px 0px;
+
+      /* 줄과 줄사이의 간격 / 컨텐츠(컬럼)과 컨텐츠간 간격 */
+      gap: 0px 10px;
+    }
+
+    /* -------------------------------------------------------------------------------------------------------- */
+    .flex_column {
+      border: 1px solid red;
+
+      display: flex;
+
+      /* 방향 세로 */
+      flex-direction: column;
+
+      /* 여백 */
+      margin: 20px 0px;
+
+      /* 줄과 줄사이의 간격 / 컨텐츠(컬럼)과 컨텐츠간 간격 */
+      gap: 10px 0px;
+    }
+
+    /* -------------------------------------------------------------------------------------------------------- */
+    .flex_column_reverse {
+      border: 1px solid green;
+
+      display: flex;
+
+      /* 방향 세로 컬럼 반대로 */
+      flex-direction: column-reverse;
+
+      /* 여백 */
+      margin: 20px 0px;
+
+      /* 줄과 줄사이의 간격 / 컨텐츠(컬럼)과 컨텐츠간 간격 */
+      gap: 10px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <!-- row기준 배치(한줄배치) -->
+    <div class="flex_row">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <div class="flex_row_reverse">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <div class="flex_column">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <div class="flex_column_reverse">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+
+  </div>
+</body>
+
+</html>

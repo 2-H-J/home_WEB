@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        /* margin을 넣는 방법은 padding과 동일 */
+        /* 상하좌우 동일하게 바깥 여백 지정 */
+        .box1 {
+            margin: 40px;
+        }
+
+        /* (상하),(좌우)에 바깥 여백을 넣는 경우 */
+        .box2 {
+            margin: 10px 100px;
+        }
+
+        /* (상), (좌우), (하) 바깥 여백을 넣는 경우 */
+        .box3 {
+            margin: 10px 20px 30px;
+        }
+
+        /* (상), (우), (하), (좌) 각각 바깥 여백을 넣는 경우 시계방향 */
+        .box4 {
+            margin: 10px 20px 30px 40px;
+            /* 
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            도 가능
+            */
+
+        }
+
+        .box5{
+            margin: 30px auto;
+        }
+
+        .sub{
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">상하좌우 동일하게 바깥 여백 <br> margin: 40px</div>
+    <hr>
+    <div class="box2">(상하),(좌우) 바깥 여백 <br> margin: 10px 100px</div>
+    <hr>
+    <div class="box3">(상), (좌우), (하) 바깥 여백 <br> margin: 10px 20px 30px</div>
+    <hr>
+    <div class="box4">(상), (우), (하), (좌) 각각 바깥 여백 <br> margin: 10px 20px 30px 40px</div>
+    <hr>
+    <div class="box5">박스 가운데 정렬
+        <div class="sub"></div>
+    </div>
+
+</body>
+
+</html>

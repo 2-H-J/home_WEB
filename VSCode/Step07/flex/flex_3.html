@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex3(주 축)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex_container {
+            width: 1200px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 70px;
+            background-color: burlywood;
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* 
+        -justify-content : 주 축 방향에서 아이템의 정렬 방식을 설정합니다.
+            flex-start : 시작 지점에 배치합니다.
+            flex-end : 끝 지점에 배치합니다.
+            center : 중앙에 배치합니다.
+            space-around : 아이템 양쪽에 동일한 간격을 둡니다 (양 끝에는 반 간격).
+            space-evenly : 모든 아이템 간에 동일한 간격을 둡니다.
+            space-between : 양 끝에 아이템을 붙이고, 아이템 간에 동일한 간격을 둡니다.
+        */
+        .flex_row {
+            display: flex;
+            flex-flow: row nowrap;
+            border: 1px solid red;
+            gap: 10px;
+            padding: 20px 0px;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 시작 지점 기준으로 배치 */
+        .align1 {
+            justify-content: flex-start;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 중앙 기준으로 배치 */
+        .align2 {
+            justify-content: center;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 끝 지점 기준으로 배치 */
+        .align3 {
+            justify-content: flex-end;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 기준 같은 간격으로 배치, 좌우 끝단 제외 */
+        .align4 {
+            justify-content: space-around;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 기준으로 맨처음과 마지막 여백까지 같은 간격으로 배치 */
+        .align5 {
+            justify-content: space-evenly;
+        }
+        
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* 메인축 양끝으로 배치 후 가운데에는 같은 간격으로 배치 */
+        .align6 {
+            justify-content: space-between;
+        }
+        
+        /* ------------------------------------------------------------------------------------------------------ */
+        .flex_column{
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            border: 1px solid black;
+            gap:  10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+
+        <div class="flex_row align1">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row align2">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row align3">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row align4">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row align5">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row align6">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="flex_row">
+
+            <div class="flex_column align1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <div class="flex_column align2">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <div class="flex_column align3">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <div class="flex_column align4">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <div class="flex_column align5">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+            <div class="flex_column align6">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

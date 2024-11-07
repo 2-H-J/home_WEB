@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃 예제</title>
+  <style>
+  /* 초기화 */
+  * {
+      margin:0;
+      padding: 0;
+    }
+
+    /* body 전체 길이 3000px */
+    body{
+      height: 3000px;
+    }
+
+    
+    header{
+      width: 1200px;
+      height: 200px;
+      margin:0 auto;
+      border:1px solid black;
+    }
+
+    nav{
+      width: 1200px;
+      margin:0 auto;
+      border:1px solid black;
+    }
+    ul {
+      list-style-type: none;
+      text-align: center;
+    }
+    li {
+      width: 200px;
+      display: inline-block;
+      padding:20px 0px;
+    }
+    .container{
+      width: 1200px;
+      margin:0 auto;
+    }
+    main{
+      width: 900px;
+      float: left;
+    }
+    section{
+      border:1px solid black;
+      height: 300px;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+    }
+    article{
+      float: left;
+      width: 300px;
+      height: 200px;
+      border:1px solid black;
+      box-sizing: border-box;
+    }
+    aside{
+      float:left;
+      border:1px solid black;
+      width: 300px;
+      height: 900px;
+      box-sizing: border-box;
+    }
+    footer{
+      width: 1200px;
+      border:1px solid black;
+      margin:0 auto;
+      clear: both;
+      padding:10px 0px;
+    }
+    .footer_container{
+      width: 100%;
+      display: inline-block;
+    }
+    .logo{
+      width: 200px;
+      height: 150px;
+      border:1px solid black;
+      float: left;
+    }
+    .company_info{
+      width: 200px;
+      height: 150px;
+      border:1px solid black;
+      float:right;
+    }
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Header 제목 영역</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu5</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <main>
+      <section>
+        <h2>Section 제목영역</h2>
+      </section>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+      <article>
+        <h2>article 제목영역</h2>
+        <p>aritcle 내용 영역</p>
+      </article>
+    </main>
+
+    <aside>
+      <h2>Aside 제목영역</h2>
+    </aside>
+    
+  </div>
+
+  <footer>
+    <div class="footer_container">
+      <div class="logo">로고</div>
+      <div class="company_info">회사정보</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

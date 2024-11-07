@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            border:20px dashed black;
+            background-color: orange;
+            /* 
+            background-clip :
+            border-box : 테두리까지 모두 전체(기본값)
+            padding-box : padding포함 내부 (테두리 제외)
+            content-box : padding안쪽 내부
+            */
+            background-clip: content-box;
+            background-repeat: no-repeat;
+            background-image: url(/resource/img/Dogimg.jpg);
+            background-size: 100% 100%;
+        }
+
+        /* 클리핑 마스크 테스트*/
+        .clip_text{
+            font-size: 2em;
+            font-weight: bold;
+            /* 글자색을 배경색으로 */
+            color: transparent;
+            /* 글자에 배경 넣기 */
+            background-clip: text;
+        }
+      
+    </style>
+</head>
+<body>
+     <!--가로 세로 400px, padding : 50px, border 20px dashed box 하나 작업-->
+     <div></div>
+     <hr>
+     <div class="clip_text">
+         글자 투명화 테스트<br>
+         글자 투명화 테스트<br>
+         글자 투명화 테스트<br>
+         글자 투명화 테스트<br>
+         글자 투명화 테스트<br>
+     </div>
+</body>
+</html>

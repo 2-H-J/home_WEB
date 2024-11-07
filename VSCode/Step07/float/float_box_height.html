@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float_box_height</title>
+</head>
+<style>
+    .container {
+        border: 1px solid black;
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0px;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        border: 1px solid green;
+        float: left;
+    }
+
+    p {
+        border: 1px solid red;
+        clear: both;
+    }
+
+    .sub_container{
+        border: 1px dashed goldenrod;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <h2>float 사용시 container의 세로 길이 설정</h2>
+    <div class="container">
+        <div class="sub_container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <p>내용 부분</p>
+</body>
+
+</html>

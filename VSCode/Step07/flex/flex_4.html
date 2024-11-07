@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex4(교차 축)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flex_container {
+            width: 1200px;
+            border: 1px solid black;
+        }
+
+        .flex_container div {
+            border: 1px solid blue;
+            padding: 10px;
+        }
+
+        .box {
+            width: 150px;
+            background-color: darkblue;
+            color: white;
+        }
+
+        /* --------------------------------------------------------------------------------------------------------------- */
+        .flex_row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+        }
+
+        /* 
+        align-items : 교차 축에서 아이템의 정렬 방식을 설정합니다.
+            flex-start : 교차 축의 시작 지점에 배치합니다.
+            flex-end : 교차 축의 끝 지점에 배치합니다.
+            center : 교차 축의 중앙에 배치합니다.
+            baseline : 텍스트 기준선에 맞춰 배치합니다.
+            stretch : 아이템을 컨테이너 높이에 맞춰 늘립니다 (기본값).
+        */
+        /* --------------------------------------------------------------------------------------------------------------- */
+        /* 교차축 기준으로 시작점에 배치 */
+        .align1 {
+            align-items: flex-start;
+        }
+
+        /* --------------------------------------------------------------------------------------------------------------- */
+        /* 교차축 기준으로 중앙에 배치 */
+        .align2 {
+            align-items: center;
+        }
+
+        /* --------------------------------------------------------------------------------------------------------------- */
+        /* 교차축 기준으로 끝점에 배치 */
+        .align3 {
+            align-items: flex-end;
+        }
+        
+        /* --------------------------------------------------------------------------------------------------------------- */
+        /* 항목을 늘려서 교차축에 가득차게 배치(기본값) */
+        .align4 {
+            align-items: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <div class="flex_row align1">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_row align2">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_row align3">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+        <div class="flex_row align4">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 모델</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      border: 20px solid black;
+      padding: 50px;
+      margin: 50px;
+    }
+    
+    /* 
+    - content-box : 기본값으로, width와 height에 패딩과 테두리를 제외한 콘텐츠만 포함합니다.
+    - border-box : width와 height에 패딩과 테두리가 포함되도록 설정합니다. 레이아웃을 관리하기 편리해 많이 사용됩니다.
+    */
+    .box1 {
+      /* 가로세로 길이를 줄때 어느 영역까지를 width 길이로 설정
+          width 길이 값이 = 테두리 두께 + padding 두께 + 콘텐츠 영역 */
+      box-sizing: border-box;
+    }
+    .box2{
+      /* 내용 영역만 width 길이로 설정, padding 테두리 길이는 별개로 설정 */
+      box-sizing: content-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">안녕하세요</div>
+  <hr>
+  <div class="box2"></div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 1200px;
+            list-style-type: none;
+            border: 1px solid red;
+            margin: 50px auto;
+            text-align: center;
+            font-size: 0px;
+        }
+
+        /* 
+        디스플레이(Display) 속성
+
+            display : 요소의 기본 레이아웃 방식을 설정합니다.
+            block : 요소를 블록 요소로 설정합니다. 줄바꿈이 일어나고, 가로폭을 모두 차지합니다.
+            inline : 요소를 인라인 요소로 설정합니다. 줄바꿈 없이 다른 요소들과 같은 줄에 배치됩니다.
+            inline-block : 인라인 요소처럼 배치되지만, 블록 요소처럼 너비와 높이를 설정할 수 있습니다.
+            flex : 요소를 플렉스 컨테이너로 설정하여 자식 요소들 간의 정렬을 쉽게 관리할 수 있습니다.
+            grid : 요소를 그리드 컨테이너로 설정하여 자식 요소들을 그리드 형태로 배치합니다.
+            none : 요소를 표시하지 않습니다.
+        */
+
+        li {
+            width: 200px;
+            border: 1px solid blue;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        /* 
+            위 아래로 여백 20px, 가로길이 100%, 배경색 navy, 텍스트 가운데 정렬,
+            글자 색상 흰색, 글꼴을 두껍게
+         */
+        a {
+            display: inline-block;
+            padding: 20px 0px;
+            width: 100%;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">항목1</a></li>
+        <li><a href="#">항목2</a></li>
+        <li><a href="#">항목3</a></li>
+        <li><a href="#">항목4</a></li>
+        <li><a href="#">항목5</a></li>
+        <li><a href="#">항목6</a></li>
+    </ul>
+    <hr>
+
+</body>
+
+</html>
