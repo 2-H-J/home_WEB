@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드2</title>
+    <style>
+        body{
+            height: 5000px;
+        }
+        .item{
+            padding:50px;
+            border:1px solid black;
+            font-size: 1.5em;
+        }
+        
+        .container{
+            height: 800px;
+            border: 1px solid red;
+            display: grid;
+            /* 한줄당 3칸, 최소 200px */
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+            /* auto-fit, auto-fill을 사용할려면 반드시 세로나 가로길이가 지정되어야 함 */
+
+            /* auto-fit: 가능한 공간에 맞춰 그리드 항목을 추가하고, 빈 칸은 추가하지 않는다 */
+            /* auto-fill : 가능한 공간을 채우면서 그리드 항목을 추가합니다. 남는 공간을 빈 항목으로 채운다 */
+            /* grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
+            grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+
+            /* gap: 10px; */
+            /* 또는 */
+            grid-gap: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+</div>
+</body>
+</html>

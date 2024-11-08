@@ -1,103 +1,178 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex</title>
     <style>
-        *{
+        * {
             margin: 0;
-            padding:0;
+            padding: 0;
         }
-       
+
+        .flex_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        header {
+            background-color: rgb(160, 158, 158);
+            padding: 20px 0px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: rgb(68, 199, 68);
+        }
+
+        .main_menu {
+            list-style-type: none;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+
+        a {
+            font-size: 1.5em;
+            color: white;
+            display: inline-block;
+            width: 200px;
+            padding: 20px 0px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* main {
+            display: flex;
+            flex-flow: column nowrap;
+        } */
+
+        .content_list_card {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 10px 10px;
+            /* padding-left: 10px; */
+        }
+
+        .item {
+            width: 20%;
+        }
+        .item > img{
+            width: 100%;
+        }
+
+        footer{
+            background-color: rgb(160, 158, 158);
+            padding: 20px 10px;
+        }
+        .company_info{
+            list-style-type: none;
+            display: flex;
+            flex-flow: column wrap;
+            height: 100px;
+            align-content: flex-start;
+            gap: 2px 10px;
+        }
+        
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Header</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="">메뉴1</a></li>
-            <li><a href="">메뉴2</a></li>
-            <li><a href="">메뉴3</a></li>
-            <li><a href="">메뉴4</a></li>
-            <li><a href="">메뉴5</a></li>
-        </ul>
-    </nav>
-    <main>
-        <article>
-            <h2>article 제목</h2>
-            <div class="content_list_card">
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
+    <div class="flex_container">
+
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <nav>
+            <ul class="main_menu">
+                <li><a href="">메뉴1</a></li>
+                <li><a href="">메뉴2</a></li>
+                <li><a href="">메뉴3</a></li>
+                <li><a href="">메뉴4</a></li>
+                <li><a href="">메뉴5</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <article>
+                <h2>article 제목</h2>
+                <div class="content_list_card">
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
+            </article>
+            <article>
+                <h2>article 제목</h2>
+                <div class="content_list_card">
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/octopus-8562474_1280.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-            </div>
-        </article>
-        <article>
-            <h2>article 제목</h2>
-            <div class="content_list_card">
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-                <div class="item">
-                    <img src="/resource/img/cat.jpg" alt="썸네일 이미지">
-                    <h3>썸네일 제목</h3>
-                    <p>썸네일 내용</p>
-                </div>
-            </div>
-        </article>
-    </main>
-    <footer>
-        <ul>
-            <li>회사명:OOO</li>
-            <li>대표 : OOO</li>
-            <li>사업자번호 : OOO-OOOO-OOOOO</li>
-            <li>통신판매업신고번호 : OOO-OOOO-OOOOO</li>
-            <li>고객 센터 연락처 : OO-OOOO-OOOO</li>
-            <li>담당자 이메일 : test@gmail.com</li>
-        </ul>
-    </footer>
+            </article>
+        </main>
+
+        <footer>
+            <ul class="company_info">
+                <li>회사명:OOO</li>
+                <li>대표 : OOO</li>
+                <li>사업자번호 : OOO-OOOO-OOOOO</li>
+                <li>통신판매업신고번호 : OOO-OOOO-OOOOO</li>
+                <li>고객 센터 연락처 : OO-OOOO-OOOO</li>
+                <li>담당자 이메일 : test@gmail.com</li>
+            </ul>
+        </footer>
+
+    </div>
 </body>
 
 </html>

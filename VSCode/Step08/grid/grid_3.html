@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드3</title>
+    <style>
+        .item{
+            padding:10px;
+            border:1px solid black;
+            margin: 5px;
+        }
+
+        .container{
+            width: 1200px;
+            border: 1px solid black;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: repeat(3, minmax(200px, 1fr));
+
+            /* grid-template-areas: 그리드 레이아웃을 이름으로 지정하여 위치를 설정 */
+            grid-template-areas: 
+            "box2 box1 box4"
+            "box2 box3 box3"
+            "box2 box3 box3"
+            "box5 box5 box5"
+            ;
+        }
+
+        .box1{
+            background-color: red;
+
+            /* grid-area: 각 그리드 아이템에 이름을 부여하고 grid-template-areas에서 지정한 위치에 배치 */
+            grid-area: box1;
+        }
+        .box2{
+            background-color: burlywood;
+            grid-area: box2;
+        }
+        .box3{
+            background-color: aquamarine;
+            grid-area: box3;
+        }
+        .box4{
+            background-color: blanchedalmond;
+            grid-area: box4;
+        }
+        .box5{
+            background-color: darkgray;
+            grid-area: box5;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">1</div>
+        <div class="item box3">3</div>
+        <div class="item box2">2</div>
+        <div class="item box4">4</div>
+        <div class="item box5">5</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+        <div class="item">6</div>
+</div>
+</body>
+</html>
