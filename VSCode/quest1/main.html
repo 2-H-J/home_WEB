@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메인 페이지</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nanum Gothic', sans-serif;
+
+    }
+
+    header {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header_container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: end;
+      margin-bottom: 15px;
+    }
+
+    .header_menu {
+      width: 400px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+
+    .header_menu a:link,
+    .header_menu a:visited {
+      text-decoration: none;
+      color: #8AA39B;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 16px;
+    }
+
+    .header_search {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    #txt_search {
+      width: 300px;
+      height: 40px;
+      padding-left: 40px;
+      border-radius: 10px;
+      border: 1px solid #5C6F68;
+      color: #5C6F68;
+
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      box-sizing: border-box;
+      font-size: 22px;
+    }
+
+    #btn_search {
+      margin-left: 5px;
+      padding: 11px 24px;
+      border-radius: 10px;
+      border: 1px solid #5C6F68;
+      background-color: #5C6F68;
+      color: #A4F9C8;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 16px;
+    }
+
+    nav {
+      min-width: 1200px;
+      height: 80px;
+      background-color: #A4F9C8;
+    }
+
+    nav ul {
+      width: 1200px;
+      height: 100%;
+      padding-left: 30px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      list-style-type: none;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin-right: 40px;
+    }
+
+    nav ul li a:link,
+    nav ul li a:visited {
+      display: inline-block;
+      height: 100%;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: #8AA39B;
+      font-size: 24px;
+      line-height: 24px;
+      padding: 26px 0px 25px 0px;
+      border-bottom: 5px solid #A4F9C8;
+    }
+
+    nav ul li a:hover {
+      color: #5C6F68;
+      font-weight: bold;
+      border-bottom: 5px solid #5C6F68;
+    }
+
+    section {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 20px;
+    }
+
+    article {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+
+    .product_info>p:first-child {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .product_info>p:last-child {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      background-color: #e9e9e9;
+      padding: 10px 0px;
+      position: relative;
+    }
+
+    footer ul {
+      width: 600px;
+      box-sizing: border-box;
+      list-style-type: none;
+    }
+
+    footer ul li {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .top {
+      width: 150px;
+      height: 60px;
+      font-size: 22px;
+      font-weight: bold;
+      background-color: #8AA39B;
+      border: 1px solid #5C6F68;
+      color: #A4F9C8;
+      border-radius: 10px;
+      padding-left: 40px;
+      background-image: url("img/top.png");
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      position: fixed;
+      bottom: 30px;
+      left: 80%;
+    }
+
+    .main-banner {
+      width: 100%;
+      height: 300px;
+      background: url("img/main.png") no-repeat center center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- 메인 배너 -->
+    <div class="header_container">
+      <ul class="header_menu">
+        <li><a href="">로그인</a></li>
+        <li><a href="">MY페이지</a></li>
+        <li><a href="">회원가입</a></li>
+        <li><a href="">고객센터</a></li>
+      </ul>
+      <div class="header_search">
+        <input type="text" id="txt_search" />
+        <button type="button" id="btn_search">검색</button>
+      </div>
+    </div>
+    <div class="main-banner"></div>
+
+  </header>
+  <nav>
+    <ul>
+      <li><a href="">전체</a></li>
+      <li><a href="">스킨케어</a></li>
+      <li><a href="">로션</a></li>
+      <li><a href="">마스크/팩</a></li>
+      <li><a href="">클렌징</a></li>
+      <li><a href="">남성</a></li>
+      <li><a href="">메이크업</a></li>
+    </ul>
+  </nav>
+  <section>
+    <article>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+      <div class="product">
+        <img src="img/thumnail.png" alt="" />
+        <div class="product_info">
+          <p>비건 수분 에센스</p>
+          <p>19,000원</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <ul>
+      <li>호스팅 서비스 제공자: (주)한국생활건강</li>
+      <li>
+        사업자등록번호 : 789-12-456874 통신판매업신고번호 : 제2023-서울마포-1111호
+      </li>
+      <li>주소 : 서울특별시 마포구 독립문로 21</li>
+      <li>5층 대표이사 : 김철수 개인정보보호책임자 : 홍길동</li>
+      <li><br></li>
+      <li>[온라인 쇼핑몰 구매 관련 문의]</li>
+      <li>000-000-0000[제품 및 오프라인(매장) 구매 관련문의]</li>
+      <li>000-000-0000</li>
+      <li>COPYRIGHTS©2023 ㈜한국생활건강 ALL RIGHT RESERVED.</li>
+    </ul>
+    <ul>
+      <li>[NEWCREDIT 구매안전(에스크로)서비스]</li>
+      <li><br></li>
+      <li>
+        고객님의 안전거래를 위해 현금 거래에 대해 NEWCREDIT 전자결제의 매매보호(에스크로) 서비스를 이용하실 수 있습니다. NEWCREDIT 에스크로
+        서비스 가입확인
+      </li>
+    </ul>
+    <button type="button" class="top">TOP</button>
+  </footer>
+</body>
+
+</html>

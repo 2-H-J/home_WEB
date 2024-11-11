@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>그리드</title>
     <style>
-       .container{
+        .container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             width: 1200px;
-            border:5px solid skyblue;
-            padding:10px;
+            border: 5px solid skyblue;
+            padding: 10px;
         }
-        .item{
-            border : 1px solid black;
+
+        .item {
+            border: 1px solid black;
             padding: 50px 0px;
             font-size: 2em;
             text-align: center;
         }
-    
+
+        .cell1 {
+            grid-row: 1;
+            grid-column: 3 / 6;
+        }
+
+        .cell2 {
+            grid-row: 1;
+
+            /* 시작 컬럼 번호 / span 칸 개수 */
+            grid-column: 1 / span 2;
+        }
+
+        .cell3 {
+            grid-row: 2;
+
+            /* grid-column: 1 / span 5; */
+            grid-column: 1 / 5;
+        }
+
+        .cell4 {
+            grid-column: 1;
+            grid-row: 3 / span 5;
+        }
+
+        .cell5 {
+            grid-column: 2 / span 4;
+            grid-row: 3;
+        }
+
+        .cell6 {
+            grid-column: 2 / span 3;
+            grid-row: 4;
+        }
+
+
+        .cell7 {
+            grid-column: 2 / span 4;
+            grid-row: 5;
+        }
+
+        .cell8 {
+            grid-column: 2 / span 4;
+            grid-row: 6;
+        }
+
+        .cell9 {
+            grid-column: 2 / span 4;
+            grid-row: 7;
+        }
+
+        .cell10 {
+            grid-column: 1 / span 5;
+            grid-row: 8;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="item cell1">1</div>
@@ -35,4 +92,5 @@
         <div class="item cell10">10</div>
     </div>
 </body>
+
 </html>

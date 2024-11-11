@@ -1,25 +1,117 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- HTML 문서 인코딩을 UTF-8로 설정하여 한글 정상 표시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형을 위해 화면 크기 설정 -->
     <title>그리드 레이아웃</title>
     <style>
-       * {
-        margin:0;
-        padding:0;
-       }
-    
+        /* 모든 요소의 기본 여백 제거 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 전체 페이지를 감싸는 그리드 컨테이너 설정 */
+        .container {
+            width: 1200px; /* 컨테이너의 전체 너비 */
+            margin: 0 auto; /* 중앙 정렬 */
+            display: grid; /* 그리드 레이아웃 사용 */
+            grid-template-columns: repeat(6, 1fr); /* 6열로 균등 배치 */
+        }
+
+        /* 헤더 영역 스타일 */
+        header {
+            border: 1px solid black; /* 테두리 */
+            grid-column: 1 / span 6; /* 1열부터 시작하여 6열까지 차지 */
+            grid-row: 1; /* 첫 번째 행에 위치 */
+            padding: 40px 0; /* 상하 여백 */
+        }
+
+        /* 네비게이션 스타일 */
+        nav {
+            border: 1px solid black;
+            grid-column: 1 / span 6; /* 6열 모두 차지 */
+            grid-row: 2; /* 두 번째 행에 위치 */
+        }
+
+        /* 네비게이션 리스트 스타일 */
+        ul {
+            display: flex; /* 리스트 항목을 가로 방향으로 나열 */
+            flex-flow: row nowrap; /* 가로 방향으로 고정 */
+            justify-content: space-evenly; /* 요소 사이에 동일한 간격 */
+            list-style-type: none; /* 리스트 스타일 없앰 */
+        }
+
+        /* 리스트 항목 스타일 */
+        li {
+            padding: 20px; /* 리스트 항목의 패딩 */
+        }
+
+        /* 링크 스타일 */
+        a {
+            text-decoration: none; /* 링크의 밑줄 제거 */
+        }
+
+        /* 섹션 영역 스타일 */
+        section {
+            grid-column: 1 / span 5; /* 1열부터 시작하여 5열까지 차지 */
+            grid-row: 3; /* 세 번째 행에 위치 */
+            border: 1px solid black; /* 테두리 */
+        }
+
+        /* 사이드 영역 스타일 */
+        aside {
+            grid-column: 6 / span 1; /* 6번째 열부터 시작하여 1열 차지 */
+            grid-row: 3; /* 세 번째 행에 위치 */
+            border: 1px solid black; /* 테두리 */
+        }
+
+        /* 섹션 내부의 그리드 설정 */
+        .section_grid {
+            display: grid; /* 그리드 레이아웃 사용 */
+            grid-template-columns: repeat(3, 1fr); /* 3열로 구성된 그리드 */
+            gap: 5px; /* 요소 간의 간격 */
+        }
+
+        /* 아티클 영역 스타일 */
+        article {
+            border: 1px solid black; /* 테두리 */
+            height: 200px; /* 고정 높이 */
+        }
+
+        /* 푸터 영역 스타일 */
+        footer {
+            border: 1px solid black; /* 테두리 */
+            padding: 20px 0; /* 상하 여백 */
+            grid-row: 4; /* 네 번째 행에 위치 */
+            grid-column: 1 / span 6; /* 6열 모두 차지 */
+            display: grid; /* 그리드 레이아웃 사용 */
+            grid-template-columns: repeat(6, 1fr); /* 6열로 구성 */
+        }
+
+        /* 푸터 내부 로고 스타일 */
+        .logo {
+            border: 1px solid black; /* 테두리 */
+            height: 100px; /* 높이 */
+            grid-column: 1 / span 1; /* 첫 번째 열에 위치 */
+        }
+
+        /* 푸터 내부 회사 정보 스타일 */
+        .company {
+            border: 1px solid black; /* 테두리 */
+            height: 100px; /* 높이 */
+            grid-column: 6 / span 1; /* 여섯 번째 열에 위치 */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!-- 페이지 전체를 감싸는 컨테이너 -->
         <header>
-            <h1>헤더영역</h1>
-            
+            <h1>헤더영역</h1> <!-- 헤더 제목 -->
         </header>
         <nav>
             <ul>
+                <!-- 네비게이션 메뉴 리스트 항목들 -->
                 <li><a href="#">menu1</a></li>
                 <li><a href="#">menu2</a></li>
                 <li><a href="#">menu3</a></li>
@@ -28,8 +120,9 @@
             </ul>
         </nav>
         <section>
-            <h2>섹션 제목 영역</h2>
+            <h2>섹션 제목 영역</h2> <!-- 섹션 제목 -->
             <div class="section_grid">
+                <!-- 각 article 요소가 3열로 배치될 그리드 영역 -->
                 <article>
                     <h3>article 제목</h3>
                     <p>내용</p>
@@ -57,11 +150,12 @@
             </div>
         </section>
         <aside>
-            <h2>aside 제목</h2>
+            <h2>aside 제목</h2> <!-- 사이드 영역 제목 -->
         </aside>
         <footer>
-            <div class="logo"></div>
-            <div class="company"></div>
+            <!-- 푸터 영역 안의 로고와 회사 정보 -->
+            <div class="logo"></div> <!-- 로고 위치 -->
+            <div class="company"></div> <!-- 회사 정보 위치 -->
         </footer>
     </div>
 </body>
