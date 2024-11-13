@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+         div{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+         }
+
+         /* 시작 css from, 마지막 css to */
+         @keyframes ani1{
+            from{
+                border-radius: 0px;
+            }
+            to{
+                border-radius: 100px;
+            }
+         }
+
+         @keyframes ani2{
+            0%{
+                left: 0px;
+            }
+            50%{
+                background-color: brown;
+            }
+            100%{
+                left: calc(100% - 200px);
+                border-radius: 100px;
+            }
+         }
+         /* 
+         - animation-name : 애니메이션의 이름을 지정합니다. @keyframes 규칙으로 정의된 이름을 사용해야 합니다.
+         - animation-duration : 애니메이션이 완료되는 데 걸리는 시간을 설정합니다.
+         - animation-timing-function : 애니메이션의 속도 곡선을 지정합니다. 전환과 동일한 값(ease, linear, 등)을 가집니다.
+         - animation-delay : 애니메이션이 시작되기 전의 지연 시간을 설정합니다.
+         - animation-iteration-count : 애니메이션의 반복 횟수를 지정합니다. 값: 숫자 또는 infinite(무한 반복)
+         - animation-direction : 애니메이션의 재생 방향을 설정합니다.
+                값 :
+                normal : 기본 재생 방향 (처음부터 끝까지)
+                reverse : 역방향으로 재생
+                alternate : 번갈아 재생 (순방향 → 역방향)
+                alternate-reverse : 역방향 → 순방향
+        
+        - animation-fill-mode : 애니메이션이 시작하거나 종료된 후 상태를 유지할지 설정합니다.
+                값 :
+                none : 애니메이션 적용 전후의 상태는 유지되지 않음 (기본값)
+                backwards : 애니메이션 시작 전 첫 번째 키프레임의 상태 적용
+                both : 시작 전 첫 번째, 종료 후 마지막 키프레임 상태 모두 유지
+                forwards : 애니메이션 종료 후 마지막 키프레임의 상태 유지
+
+        - animation-play-state : 애니메이션의 재생 상태를 설정합니다. paused를 통해 애니메이션을 멈출 수 있습니다.
+                값 : running(재생), paused(정지)
+         */
+         .box{
+            /* 
+            animation-name: ani1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 3s;
+            */
+            animation: anil 2s 3s infinite alternate;
+         }
+
+         .mbox{
+            position: relative;
+            animation: ani2 2s 3s infinite;
+         }
+    </style>
+</head>
+<body>
+    <div class="box"></div>    
+    <hr>
+    <div class="mbox"></div>
+</body>
+</html>

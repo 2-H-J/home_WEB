@@ -8,7 +8,34 @@
         body{
             height: 3000px;
         }
-       
+        .container{
+            width: 1200px;
+            height: 600px;
+            margin: 0px auto;
+            border: 1px solid black;
+            /* - relative : 요소를 일반적인 위치에서 상대적으로 이동시킵니다. */
+            position: relative;
+        }
+       .item{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        top: 100px;
+        left: 100px;
+       }
+       /* 
+        - absolute : 요소를 가장 가까운 'relative' 부모 요소를 기준으로 절대 위치시킵니다.(부모 태그도 포지션을 줘야 한다.)
+        */
+        .absolute{
+            position: absolute;
+        }
+        /* - fixed : 요소를 '화면의 특정 위치에 고정'시킵니다. 스크롤해도 움직이지 않습니다. */
+       .fixed{
+        position: fixed;
+       }
+       .relative{
+        position: relative;
+       }
     </style>
 </head>
 <body>
@@ -22,6 +49,7 @@
             <p>내용</p>
         </div>
     </div>
+
     <div class="item relative">
         <h2>제목 - 3</h2>
         <p>내용</p>

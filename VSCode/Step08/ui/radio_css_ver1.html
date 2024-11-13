@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 이미지 체크</title>
+</head>
+
+<style>
+    /* input 스타일 정의 */
+    input {
+        /* 기본 라디오 버튼 숨기기 */
+        /* visibility: hidden; */
+        /* 요소는 보이지 않지만 공간은 차지 */
+
+        display: none;
+        /* 요소를 완전히 숨기기 */
+    }
+
+    /* label 스타일 정의 */
+    label {
+        padding-left: 30px;
+        /* 텍스트 왼쪽에 30px 패딩 추가 */
+        font-size: 25px;
+        /* 텍스트 크기 25px 설정 */
+        font-weight: bold;
+        /* 텍스트를 굵게 설정 */
+        background-image: url(/resource/img/radio_none_check.png);
+        /* 선택되지 않은 상태의 배경 이미지 */
+        background-repeat: no-repeat;
+        /* 배경 이미지를 반복하지 않음 */
+        background-position: left center;
+        /* 배경 이미지를 왼쪽 가운데에 배치 */
+        background-size: 20px;
+        /* 배경 이미지의 크기를 20px로 설정 */
+        line-height: 25px;
+        /* 라벨의 줄 높이를 25px로 설정 */
+    }
+
+    /* 라디오 버튼이 체크된 상태일 때 label 스타일 */
+    input:checked+label {
+        background-image: url(/resource/img/radio_check.png);
+        /* 선택된 상태의 배경 이미지 */
+    }
+</style>
+
+<body>
+    <!-- 라디오 버튼 항목 1 -->
+    <input type="radio" name="r" id="r1"> <!-- name="r"으로 그룹화, id="r1"로 첫 번째 라디오 버튼 정의 -->
+    <label for="r1">항목1</label> <!-- id="r1"과 연결된 label로, 클릭 시 라디오 버튼이 체크됨 -->
+    <br> <!-- 라디오 버튼 간 줄바꿈 -->
+
+    <!-- 라디오 버튼 항목 2 -->
+    <input type="radio" name="r" id="r2"> <!-- name="r"으로 그룹화, id="r2"로 두 번째 라디오 버튼 정의 -->
+    <label for="r2">항목2</label> <!-- id="r2"과 연결된 label로, 클릭 시 라디오 버튼이 체크됨 -->
+</body>
+
+</html>

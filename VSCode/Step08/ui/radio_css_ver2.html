@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 체크 스타일</title>
+</head>
+<style>
+    .radio {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid red;
+        /* border-radius: 50%; */
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 3px;
+        background-clip: content-box;
+    }
+
+    /* 기본 라디오 버튼 숨기기 */
+    input[type="radio"] {
+        display: none;
+    }
+    input:checked+label > .radio{
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <input type="radio" id="chk1" name="items">
+    <label for="chk1"><span class="radio checked"></span>항목1</label>
+    <input type="radio" id="chk2" name="items">
+    <label for="chk2"><span class="radio checked"></span>항목2</label>
+</body>
+
+</html>

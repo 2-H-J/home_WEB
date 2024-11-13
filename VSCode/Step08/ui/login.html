@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 예제</title>
+  <style>
+    input{
+      padding:5px;
+      height: 50px;
+      width: 300px;
+      border : 2px inset gray;
+      box-sizing: border-box;
+      background-size: 35px;
+      background-position: 5px center;
+      background-repeat: no-repeat;
+      padding-left: 50px;
+      font-size: 1.2em;
+    }
+    .profile{
+      background-image: url('/resource/img/profile.png');
+    }
+    .key{
+      background-image: url('/resource/img/password.png');
+    }
+    button{
+      width: 250px;
+      padding:5px;
+      height: 50px;
+      width: 300px;
+      border : 2px inset #2F528F;
+      box-sizing: border-box;
+      background-color:#4472C4;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      font-size: 1.3em;
+    }
+    #login_form{
+      margin: 0 auto;
+      width: 400px;
+      padding: 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+    <div id="login_form">
+      <input type="text" class="profile">
+      <input type="password" class="key">
+      <button>로그인</button>
+    </div>
+  </body>
+</html>

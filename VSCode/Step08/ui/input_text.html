@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>input_text</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 상자</title>
+  <style>
+    .txt_search{
+      width: 200px;
+      height: 25px;
+      background-image: url('/resource/img/search.png');
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 5px center;
+      padding-left: 30px;
+    }
+    .txt{
+      width: 200px;
+      margin-top: 20px;
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 10px 5px;
+      border-radius: 5px;
+      border: 2px outset gray;
+      gap: 10px;
+    }
+    .txt_search_2{
+      border:none;
+      outline: none;
+    }
+    .txt:has(input:focus){
+      border-bottom: 2px solid blue;
+    }
+  </style>
 </head>
-<style>
-    .txt_search {
-        width: 200px;
-        height: 25px;
-        background-image: url(/resource/icon/search.png);
-        background-repeat: no-repeat;
-        background-size: 20px;
-        background-position: 5px center;
-        padding-left: 30px;
-    }
-/* ---------------------------------------------------------------------- */
-    .txt_search_span {
-        width: 200px;
-        margin-top: 20px;
-        display: flex;
-        flex-flow: row nowrap;
-        padding: 10px 5px;
-        border-radius: 5px;
-        border: 1px solid gray;
-        gap: 5px;
-    }
-
-    .txt_search_2 {
-        border: none;
-        outline: none;
-    }
-</style>
-
 <body>
-    <input type="text" class="txt_search">
-
-    <hr>
-
-    <span class="txt_search_span  ">
-        <a href="#">
-            <img src="/resource/icon/search.png" alt="">
-        </a>
-        <input type="text" class="txt_search_2">
-    </span>
+  <input type="text" class="txt_search">
+  <br>
+  <span class="txt">
+    <img src="/resource/img/search.png" alt="">
+    <input type="text" class="txt_search_2">
+  </span>
 </body>
-
 </html>

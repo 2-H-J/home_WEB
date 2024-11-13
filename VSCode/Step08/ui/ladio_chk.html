@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 체크</title>
+</head>
+<style>
+    /* 
+        배경 이미지 사용
+        input태그,
+        label태그 사용, 
+        :checked속성 사용, 
+        해당 태그를 숨길때는 display:none 사용 
+    */
+    .radio-group {
+        display: flex;
+        /* 라디오 버튼들을 가로로 정렬 */
+        flex-flow: column;
+        gap: 20px;
+        /* 각 라디오 버튼 사이에 20px 간격 추가 */
+    }
+
+    .radio-input {
+        display: none;
+        /* 기본 라디오 버튼 숨기기 */
+    }
+
+    .radio-label {
+        width: 50px;
+        /* label 요소의 너비를 50px로 설정 */
+        height: 50px;
+        /* label 요소의 높이를 50px로 설정 */
+        background-image: url('/resource/img/radio_none_check.png');
+        /* 기본 상태 이미지 */
+        background-size: cover;
+        /* 이미지가 label 크기에 맞춰 채워지도록 설정 */
+        cursor: pointer;
+        /* 마우스 커서를 올렸을 때 손 모양 커서로 표시 */
+        display: inline-block;
+        /* label 요소가 블록처럼 표시되도록 설정 */
+    }
+
+    /* 라디오 버튼이 체크된 상태일 때 스타일 */
+    .radio-input:checked+.radio-label {
+        background-image: url('/resource/img/radio_check.png');
+        /* 선택된 상태에서 보여줄 이미지 */
+    }
+</style>
+
+<body>
+    <div class="radio-group">
+        <!-- 라디오 버튼의 그룹을 표시하기 위한 컨테이너 -->
+
+        <!-- 첫 번째 라디오 버튼 (숨겨진 input) -->
+        <input type="radio" id="option1" name="options" class="radio-input">
+        <!-- 라디오 버튼을 클릭할 수 있게 하는 label 요소 -->
+        <label for="option1" class="radio-label">항목1</label>
+
+        <!-- 두 번째 라디오 버튼 (숨겨진 input) -->
+        <input type="radio" id="option2" name="options" class="radio-input">
+        <!-- 두 번째 라디오 버튼을 클릭할 수 있게 하는 label 요소 -->
+        <label for="option2" class="radio-label">항목2</label>
+    </div>
+
+</body>
+
+</html>

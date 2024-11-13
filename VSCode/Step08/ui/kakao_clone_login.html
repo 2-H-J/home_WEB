@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    h1{
+      text-align: center;
+      margin-top : 70px;
+      margin-bottom:50px;
+    }
+    .container{
+      width: 580px;
+      height: 480px;
+      border: 1px solid #e5e5e5;
+      margin:0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    input{
+      width: 440px;
+      border : none;
+      border-bottom: 2px solid gray;
+      height: 45px;
+      font-size: 1.2em;
+    }
+    button{
+      width: 440px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+    .btn_login{
+      background-color: #fada0a;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    .user_menu{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      width: 440px;
+    }
+    .user_sub_menu{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      list-style-type: none;
+      gap : 15px;
+    }
+    .center_line{
+      width: 440px;
+      display: flex;
+      flex-flow: row nowrap;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+      color:gray;
+      gap: 10px;
+    }
+    .first_line, .last_line{
+      width: calc(50% - 32px);
+    }
+  </style>
+</head>
+<body>
+  <h1>kakao</h1>
+  <div class="container">
+    <input type="text" class="txt_id" placeholder="카카오메일 아이디, 이메일, 전화번호">
+    <input type="password" class="txt_password" placeholder="비밀번호">
+    <button class="btn_login">로그인</button>
+    <ul class="center_line">
+      <li class="first_line"><hr></li>
+      <li>또는</li>
+      <li class="last_line"><hr></li>
+    </ul>
+    <button>QR코드 로그인</button>
+    <div class="user_menu">
+      <a href="">회원가입</a>
+      <ul class="user_sub_menu">
+        <li><a href="">계정 찾기</a></li>
+        <li style="color: #e5e5e5;">|</li>
+        <li><a href="">비밀번호 찾기</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
