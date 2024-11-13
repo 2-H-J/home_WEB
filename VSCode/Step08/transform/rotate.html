@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-image: url(/resource/img/octopus-8562474_1280.jpg);
+            background-size: 100% 100%;
+        }
+
+        .container {
+            width: 100%;
+            margin: 300px auto;
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 50px;
+            background-image: none;
+            justify-content: center;
+        }
+
+        /* 요소를 지정한 각도만큼 회전시킵니다. 2D 회전에는 rotate를 사용하고, 3D 회전에는 rotateX, rotateY, rotateZ가 사용 */
+        /* angle: 회전할 각도, deg 단위를 사용합니다. (예: 45deg, 90deg 등) */
+
+        .t1 {
+            /* 가운데 x축 중심 45도 */
+            transform: rotateX(45deg);
+        }
+
+        .t2 {
+            transform: rotateY(80deg);
+        }
+
+        .t3 {
+            /* rotateZ(각도): z축을 중심으로 회전 (2D rotate와 동일한 효과) */
+            transform: rotateZ(-45deg);
+        }
+
+        .t4 {
+            /* x, y, z축의 벡터를 넣고 회전각도 지정 */
+            /* 특정 축을 중심으로 회전할 수 있도록 x, y, z 축을 설정할 수 있는 기능 */
+            transform: rotate3d(1, 1, 0, 70deg);
+        }
+
+        .t5{
+            animation: ani1 0.1s linear infinite;
+            /* 애니매이션name 완료시간지정  */
+        }
+        @keyframes ani1{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="t1"></div>
+        <div class="t2"></div>
+        <div class="t3"></div>
+        <div class="t4"></div>
+        <div class="t5"></div>
+    </div>
+</body>
+
+</html>

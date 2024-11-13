@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            background-color: red;
+        }
+
+        /* screen : 모든 화면 */
+        @media screen and (max-width:1200px) {
+            .container {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (max-width:760px) {
+            .container {
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (max-width:360px) {
+            .container {
+                background-color: cadetblue;
+            }
+        }
+    </style>
+
+<body>
+    <div class="container"></div>
+</body>
+
+</html>
