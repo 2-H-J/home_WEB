@@ -6,90 +6,200 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>레이아웃 2</title>
   <style>
+    /* 모든 HTML 요소의 기본 여백과 패딩 제거 */
     * {
       margin: 0;
+      /* 요소의 외부 여백(간격)을 0으로 초기화 */
       padding: 0;
+      /* 요소의 내부 여백(내용과 경계 사이의 간격)을 0으로 초기화 */
+      /*
+      margin과 padding을 초기화하여 브라우저 간의 기본 스타일 차이를 제거하고
+      모든 요소를 동일한 초기 상태에서 시작하도록 설정합니다.
+    */
     }
 
+    /* body 스타일 */
     body {
       height: 3000px;
+      /* body 요소의 높이를 3000px로 설정 */
+      /*
+      height: 3000px은 스크롤 동작을 테스트하거나 페이지에 공간을 추가하기 위해 사용됩니다.
+    */
     }
 
+    /* 플렉스 컨테이너 스타일 */
     .flex_container {
       width: 1200px;
+      /* 컨테이너의 가로 너비를 1200px로 설정 */
       margin: 0 auto;
+      /* 부모 요소 기준으로 수평 중앙 정렬 */
       margin-top: 30px;
+      /* 컨테이너 위쪽에 30px 여백 추가 */
       display: flex;
+      /* 플렉스 박스 레이아웃 활성화 */
       flex-flow: column nowrap;
+      /* 요소를 세로 방향으로 배치하며 줄 바꿈 방지 */
+      /*
+      flex-flow는 flex-direction과 flex-wrap의 단축 속성입니다.
+      column: 요소를 세로 방향으로 배치합니다.
+      nowrap: 줄 바꿈을 방지하여 요소를 한 줄에 배치합니다.
+    */
     }
 
+    /* 헤더 스타일 */
     header {
       border: 1px solid black;
+      /* 헤더 테두리를 검은색으로 설정 */
       height: 200px;
+      /* 헤더의 높이를 200px로 설정 */
+      /*
+      header는 페이지 상단의 제목, 로고, 메뉴 등을 포함하는 영역입니다.
+    */
     }
 
+    /* 내비게이션 스타일 */
     nav {
       border: 1px solid black;
+      /* 내비게이션 테두리를 검은색으로 설정 */
+      /*
+      nav는 페이지 내비게이션 메뉴를 정의하는 영역입니다.
+    */
     }
 
+    /* 내비게이션 리스트 스타일 */
     ul {
       list-style-type: none;
+      /* 리스트의 기본 불릿 기호 제거 */
       display: flex;
+      /* 플렉스 박스를 사용하여 배치 */
       flex-flow: row nowrap;
+      /* 요소를 가로로 배치하며 줄 바꿈 방지 */
       justify-content: center;
+      /* 리스트 항목을 부모 요소 기준으로 중앙 정렬 */
+      /*
+      flex-flow: row nowrap은 요소를 가로로 정렬하며 줄 바꿈을 방지합니다.
+      justify-content: center는 리스트 항목을 중앙에 정렬합니다.
+    */
     }
 
+    /* 내비게이션 링크 스타일 */
     a {
       display: inline-block;
+      /* 인라인 블록으로 설정하여 크기 조정 가능 */
       width: 200px;
+      /* 링크의 가로 너비를 200px로 설정 */
       padding: 20px 0px;
+      /* 위아래 20px의 내부 여백 설정 */
       text-align: center;
+      /* 텍스트를 중앙 정렬 */
       text-decoration: none;
+      /* 기본 링크 밑줄 제거 */
       color: black;
+      /* 텍스트 색상을 검정으로 설정 */
+      /*
+      a 요소는 내비게이션 항목으로 사용되며,
+      padding과 text-align을 통해 텍스트의 위치를 조정합니다.
+    */
     }
 
+    /* 메인 컨테이너 스타일 */
     .container {
       display: flex;
+      /* 플렉스 박스를 사용하여 배치 */
       flex-flow: row nowrap;
+      /* 요소를 가로로 배치하며 줄 바꿈 방지 */
+      /*
+      .container는 main과 aside를 배치하는 레이아웃을 정의합니다.
+      flex-flow: row nowrap은 두 요소를 가로로 나란히 배치합니다.
+    */
     }
 
+    /* 메인 영역 스타일 */
     main {
       width: 80%;
+      /* 메인 영역의 가로 너비를 부모 요소의 80%로 설정 */
       display: flex;
+      /* 플렉스 박스를 사용하여 내부 요소 배치 */
       flex-flow: row wrap;
+      /* 요소를 가로로 배치하며, 공간이 부족하면 줄 바꿈 */
+      /*
+      main은 주요 콘텐츠를 배치하는 영역입니다.
+      flex-flow: row wrap은 요소가 부족할 경우 줄 바꿈을 허용합니다.
+    */
     }
 
+    /* 섹션 스타일 */
     section {
       border: 1px solid black;
+      /* 섹션 테두리를 검은색으로 설정 */
       width: 100%;
+      /* 섹션의 가로 너비를 부모 요소의 100%로 설정 */
       height: 200px;
+      /* 섹션의 높이를 200px로 설정 */
+      /*
+      section은 main 내부에서 콘텐츠 블록을 나타냅니다.
+      width: 100%는 부모 요소의 전체 너비를 차지하도록 설정합니다.
+    */
     }
 
+    /* 아티클 스타일 */
     article {
       width: calc(100% / 3);
+      /* 부모 요소의 1/3 너비로 설정 */
       border: 1px solid black;
+      /* 아티클 테두리를 검은색으로 설정 */
       height: 150px;
+      /* 아티클의 높이를 150px로 설정 */
       box-sizing: border-box;
+      /* 테두리와 패딩을 포함한 크기 계산 */
+      /*
+      calc는 동적 계산을 통해 너비를 설정합니다.
+      box-sizing: border-box는 요소의 전체 크기에 패딩과 테두리를 포함시킵니다.
+    */
     }
 
+    /* 사이드바 스타일 */
     aside {
       width: 20%;
+      /* 사이드바의 가로 너비를 부모 요소의 20%로 설정 */
       border: 1px solid black;
+      /* 사이드바 테두리를 검은색으로 설정 */
+      /*
+      aside는 부가 콘텐츠(예: 광고, 링크 등)를 포함하는 영역입니다.
+    */
     }
 
+    /* 푸터 스타일 */
     footer {
       border: 1px solid black;
+      /* 푸터 테두리를 검은색으로 설정 */
       padding: 20px 0px;
+      /* 위아래 20px의 내부 여백 설정 */
       display: flex;
+      /* 플렉스 박스를 사용하여 내부 요소 배치 */
       flex-flow: row nowrap;
+      /* 내부 요소를 가로로 배치하며 줄 바꿈 방지 */
       justify-content: space-between;
+      /* 요소 간의 간격을 동일하게 분배 */
+      /*
+      footer는 페이지 하단 정보를 포함하는 영역입니다.
+      justify-content: space-between은 요소를 양 끝과 중앙에 배치합니다.
+    */
     }
 
+    /* 로고와 회사 정보 스타일 */
     .logo,
     .company_info {
       width: 200px;
+      /* 요소의 가로 너비를 200px로 설정 */
       height: 150px;
+      /* 요소의 높이를 150px로 설정 */
       border: 1px solid black;
+      /* 테두리를 검은색으로 설정 */
+      /*
+      .logo와 .company_info는 각각 로고와 회사 정보를 나타내는 블록입니다.
+      동일한 크기와 테두리를 유지하여 균형 잡힌 디자인을 제공합니다.
+    */
     }
   </style>
 </head>

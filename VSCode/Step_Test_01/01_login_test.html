@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인테스트01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 590px;
+            margin: 10px auto;
+            border: 1px solid black;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0px;
+            font-weight: normal;
+        }
+
+        .txt_box {
+            width: 430px;
+            height: 52px;
+            margin: 5px auto;
+            padding-left: 10px;
+            font-size: 1.2em;
+            border: 1px solid #e9e9e9;
+            box-sizing: border-box;
+        }
+
+        .btn_login {
+            background-color: black;
+            color: white;
+            width: 430px;
+            font-size: 1.5em;
+            margin: 10px auto;
+            padding: 15px 0px;
+            font-weight: normal;
+        }
+
+        .chk_bar {
+            width: 430px;
+            font-size: 1.2em;
+        }
+        input[type=checkbox]{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+        <input type="text" class="txt_box" placeholder="아이디(*이메일 형식 입력 불가)">
+        <input type="password" class="txt_box" placeholder="비밀번호">
+        <button class="btn_login">로그인</button>
+        <div class="chk_bar">
+            <input type="checkbox" id="save"><label for="save">아이디저장</label>
+        </div>
+        <hr>
+        <ul>
+            <li>수강생은 현재 페이지 https://www.kh-academy.co.kr/login/login.kh를 <span class="strong">즐겨찾기 추가</span> 해주세요.</li>
+        </ul>
+        <button class="btn_fav">즐겨찾기 추가하기</button>
+    </div>
+</body>
+
+</html>
