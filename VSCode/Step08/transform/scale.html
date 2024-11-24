@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scale</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        div{
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            background-image: url(/resource/img/octopus-8562474_1280.jpg);
-            background-size: 100% 100%;
-        }
-        .container{
-            width: 100%;
-            margin: 300px auto;
-            display: flex;
-            flex-flow: row nowrap;
-            gap: 50px;
-            background-image: none;
-            justify-content: center;
-        }
-
-        .t1{
-            /* scaleX : x축 2배 늘리기 */
-            transform: scaleX(2);
-        }
-
-        .t2{
-            /* scaleY : y축 2배 */
-            transform: scaleY(2);
-        }
-
-        .t3{
-            transform: scaleZ(2);
-        }
-
-        .t4{
-            /* x, y축 1.5배 */
-            transform: scale(1.5, 1.5);
-        }
-
-        .t5{
-            /* 글자도 확대 */
-            transform: scale(1.5,1.5);
-            background-image: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scale</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      background-image: url(/resource/img/halloween.jpg);
+      background-size: 100% 100%;
+    }
+    .container{
+      width: 100%;
+      margin : 300px auto;
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 100px;
+      background-image: none;
+      justify-content: center;
+    }
+    .t1{
+      transform: scaleX(2);
+    }
+    .t2{
+      transform: scaleY(2);
+    }
+    .t3{
+      transform: scaleZ(2);
+    }
+    .t4{
+      transform: scale(1.5,1.5);
+    }
+    .t5{
+      transform: scale(1.5,1.5);
+      background-image: none;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="t1"></div>
-        <div class="t2"></div>
-        <div class="t3"></div>
-        <div class="t4"></div>
-        <div class="t5">안녕하세요</div>
-    </div>
+  <div class="container">
+    <div class="t1"></div>
+    <div class="t2"></div>
+    <div class="t3"></div>
+    <div class="t4"></div>
+    <div class="t5">안녕하세요</div>
+    <div>안녕하세요</div>
+  </div>
 </body>
-
 </html>

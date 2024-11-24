@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex</title>
+    <title>레이아웃 1</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        .flex_container{
+        .flex_container {
             border: 1px solid red;
             width: 1200px;
             margin: 0 auto;
-            display: flex;/* 요소를 플렉스 컨테이너로 설정 */
+            display: flex;
+            /* 요소를 플렉스 컨테이너로 설정 */
             flex-flow: column nowrap;
             /* 
             flex-flow : flex-direction랑 flex-wrap을 동시 적용
@@ -24,27 +25,27 @@
             */
         }
 
-        header{
+        header {
             border: 1px solid black;
             height: 200px;
         }
 
-        nav{
+        nav {
             border: 1px solid black;
         }
 
-        ul{
+        ul {
             list-style-type: none;
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
         }
 
-        li{
+        li {
             width: 200px;
         }
 
-        a{
+        a {
             display: inline-block;
             width: 100%;
             padding: 20px 0px;
@@ -53,27 +54,26 @@
             color: black;
         }
 
-        aside{
+        aside {
             border: 1px solid black;
             width: 20%;
         }
 
-        section{
+        section {
             border: 1px solid black;
             width: 60%;
         }
-        
-        .container{
+
+        .container {
             display: flex;
             flex-flow: row nowrap;
             height: 500px;
         }
 
-        footer{
+        footer {
             border: 1px solid black;
             height: 200px;
         }
-
     </style>
 </head>
 

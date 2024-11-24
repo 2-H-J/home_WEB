@@ -4,34 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>float_box_height</title>
+    <title>float height</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid green;
+            float: left;
+        }
+
+        p {
+            clear: both;
+        }
+
+        .sub_container {
+            border: 1px solid goldenrod;
+            display: inline-block;
+        }
+    </style>
 </head>
-<style>
-    .container {
-        border: 1px solid black;
-        width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 0px;
-    }
-
-    .box {
-        width: 150px;
-        height: 150px;
-        border: 1px solid green;
-        float: left;
-    }
-
-    p {
-        border: 1px solid red;
-        clear: both;
-    }
-
-    .sub_container{
-        border: 1px dashed goldenrod;
-        display: inline-block;
-    }
-</style>
 
 <body>
     <h2>float 사용시 container의 세로 길이 설정</h2>

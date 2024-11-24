@@ -1,41 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>게시판</title>
   <style>
-    table{
+    /* 테이블 스타일 */
+    table {
       border-collapse: collapse;
+      /* 테이블 셀 간의 테두리를 병합하여 하나로 만듭니다. */
       width: 800px;
+      /* 테이블의 너비를 800px로 고정 설정합니다. */
+      /*
+    border-collapse: collapse는 셀 간 경계선이 분리되지 않고 합쳐지도록 설정합니다.
+    width 속성은 테이블 전체 크기를 제한합니다.
+  */
     }
-    caption{
+
+    /* 테이블 제목(caption)의 스타일 */
+    caption {
       font-size: 2em;
+      /* 캡션 텍스트의 크기를 2배로 설정하여 강조합니다. */
+      /*
+    caption은 테이블에 제목이나 설명을 제공하는 요소입니다.
+    font-size는 텍스트의 크기를 조정하여 강조합니다.
+  */
     }
-    th{
+
+    /* 테이블 헤더(th) 스타일 */
+    th {
       background-color: #e9e9e9;
+      /* 헤더의 배경색을 밝은 회색(#e9e9e9)으로 설정합니다. */
+      /*
+    th 요소는 테이블의 머리글 역할을 하며,
+    background-color를 통해 시각적으로 구분됩니다.
+  */
     }
-    .title{
+
+    /* .title 클래스 스타일 */
+    .title {
       width: 400px;
+      /* 제목 열의 너비를 400px로 설정합니다. */
+      /*
+    클래스명 .title은 특정 열이나 셀에 적용되며,
+    width를 통해 열의 크기를 조정합니다.
+  */
     }
-    td,th{
+
+    /* 테이블 데이터(td) 및 헤더(th) 공통 스타일 */
+    td,
+    th {
       text-align: center;
+      /* 셀 내부 텍스트를 가로 방향으로 중앙 정렬합니다. */
       border-top: 1px solid gray;
+      /* 셀 상단에 회색 테두리를 추가합니다. */
       border-bottom: 1px solid gray;
-      padding:5px;
+      /* 셀 하단에 회색 테두리를 추가합니다. */
+      padding: 5px;
+      /* 셀 내부 여백을 상하좌우 각각 5px로 설정합니다. */
+      /*
+    text-align은 셀 내 텍스트를 가운데로 배치하여 가독성을 높입니다.
+    border-top과 border-bottom은 셀을 시각적으로 구분합니다.
+    padding은 텍스트와 셀 경계 간의 간격을 추가합니다.
+  */
     }
-    button{
-      border:none;
+
+    /* 버튼 스타일 */
+    button {
+      border: none;
+      /* 버튼의 기본 테두리를 제거합니다. */
       width: 50px;
+      /* 버튼의 가로 너비를 50px로 설정합니다. */
       height: 50px;
+      /* 버튼의 세로 높이를 50px로 설정합니다. */
       border-radius: 10px;
+      /* 버튼의 모서리를 둥글게 설정합니다. */
+      /*
+    border-radius는 버튼을 부드럽고 둥글게 만들어 시각적 디자인을 향상시킵니다.
+    width와 height는 버튼의 크기를 제한하여 일관된 디자인을 제공합니다.
+  */
     }
-    .active{
+
+    /* 활성화된(active) 버튼 스타일 */
+    .active {
       background-color: navy;
+      /* 버튼의 배경색을 네이비(navy) 색상으로 설정합니다. */
       color: #FFFFFF;
+      /* 버튼 텍스트 색상을 흰색(#FFFFFF)으로 설정합니다. */
+      /*
+    .active 클래스는 특정 상태를 강조하거나 활성화된 버튼을 나타냅니다.
+    배경색과 텍스트 색상을 대비되게 설정하여 강조 효과를 제공합니다.
+  */
     }
   </style>
 </head>
+
 <body>
   <table>
     <caption>게시판</caption>
@@ -51,58 +111,60 @@
     </thead>
     <tbody>
       <tr>
-          <td>1</td>
-          <td>제목</td>
-          <td>0</td>
-          <td>2010-11-19</td>
-          <td>0</td>
-          <td>1</td>
+        <td>1</td>
+        <td>제목</td>
+        <td>0</td>
+        <td>2010-11-19</td>
+        <td>0</td>
+        <td>1</td>
       </tr>
       <tr>
-          <td>2</td>
-          <td>제목</td>
-          <td>34</td>
-          <td>2010-11-19</td>
-          <td>22</td>
-          <td>152</td>
+        <td>2</td>
+        <td>제목</td>
+        <td>34</td>
+        <td>2010-11-19</td>
+        <td>22</td>
+        <td>152</td>
       </tr>
       <tr>
-          <td>3</td>
-          <td>제목</td>
-          <td>654</td>
-          <td>2010-11-19</td>
-          <td>110</td>
-          <td>141</td>
+        <td>3</td>
+        <td>제목</td>
+        <td>654</td>
+        <td>2010-11-19</td>
+        <td>110</td>
+        <td>141</td>
       </tr>
       <tr>
-          <td>4</td>
-          <td>제목</td>
-          <td>230</td>
-          <td>2010-11-19</td>
-          <td>30</td>
-          <td>1</td>
+        <td>4</td>
+        <td>제목</td>
+        <td>230</td>
+        <td>2010-11-19</td>
+        <td>30</td>
+        <td>1</td>
       </tr>
       <tr>
-          <td>5</td>
-          <td>제목</td>
-          <td>66</td>
-          <td>2010-11-19</td>
-          <td>60</td>
-          <td>16</td>
+        <td>5</td>
+        <td>제목</td>
+        <td>66</td>
+        <td>2010-11-19</td>
+        <td>60</td>
+        <td>16</td>
       </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="6" style="border: none;">
-        <button><</button>
-        <button>1</button>
-        <button class="active">2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>></button>
-      </td>
-    </tr>
-  </tfoot>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" style="border: none;">
+          <button>
+            << /button>
+              <button>1</button>
+              <button class="active">2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>></button>
+        </td>
+      </tr>
+    </tfoot>
   </table>
 </body>
+
 </html>

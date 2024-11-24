@@ -5,70 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popup</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-
-        .popup1 {
-            border: 2px solid cornflowerblue;
-            width: 400px;
-            height: 200px;
-            font-size: 0px;
-            position: absolute;
-            top: 200px;
-            left: 300px
-        }
-
-        .popup2 {
-            border: 2px solid cornflowerblue;
-            width: 400px;
-            height: 200px;
-            font-size: 0px;
-            position: absolute;
-            top: 200px;
-            right: 300px
-        }
-
-        button{
-            border: none;
-            background-color: cornflowerblue;
-            color: white;
-            font-weight: bold;
-            width: 50%;
-            height: 50px;
-            font-size: 16px;
-        }
-
-        img{
-            width: 100%;
-        }
-
-        input{
-            margin-top: 5px;
-        }
-        a{
-            color: white;
-        }
     </style>
 </head>
 
 <body>
-    <div class="popup1">
-        <a href=""><img src="/resource/img/octopus-8562474_1280.jpg" alt=""></a>
-        <button>다시보지않기</button>
-        <button>닫기</button>
-    </div>
-
-    <div class="popup2">
-        <a href=""><img src="/resource/img/octopus-8562474_1280.jpg" alt=""></a>
-        <form action="">
-            <input type="checkbox">
-            <label for="">오늘 하루 다시보지 않기</label></form>
-        <a href="오늘 하루 다시보지 않기"></a>
-    </div>
     <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 국가는 모성의 보호를 위하여 노력하여야 한다. 대통령의 임기는 5년으로 하며, 중임할 수 없다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기
         위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 대통령이 궐위되거나 사고로 인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다. 국민의 모든
         자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다. 국토와 자원은 국가의
@@ -144,7 +90,64 @@
         정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다. 군인·군무원·경찰공무원 기타 법률이 정하는 자가 전투·훈련등 직무집행과 관련하여 받은 손해에
         대하여는 법률이 정하는 보상외에 국가 또는 공공단체에 공무원의 직무상 불법행위로 인한 배상은 청구할 수 없다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한
         지체없이 공개재판을 받을 권리를 가진다.</p>
-
+    <div class="popup1">
+        <a href=""><img src="/resource/img/house_view_1.jpg" alt=""></a>
+        <button>다시보지않기</button><button>닫기</button>
+    </div>
+    <style>
+        .popup1{
+            width: 400px;
+            border:2px solid cornflowerblue;
+            font-size: 0px;
+            position: absolute;
+            top: 300px;
+            left: 200px;
+             /* opacity : 해당 태그 투명도 - 0 ~ 1 */
+            /* opacity: 0.5; */
+        }
+        img{
+            width: 100%;
+        }
+        button{
+            border: none;
+            background-color: cornflowerblue;
+            color: white;
+            font-weight: bold;
+            width: 50%;
+            height: 50px;
+            font-size: 16px;
+        }
+    </style>
+    <div class="popup2">
+        <img src="/resource/img/halloween.jpg" alt="">
+        <p class="footer_bar">
+            <input type="checkbox" id="chk">
+            <label for="chk">오늘 하루 다시보지 않기</label>
+        </p>
+        <a href="" class="btn_close">X</a>
+    </div>
+    <style>
+        .popup2{
+            width: 400px;
+            border: 2px solid cornflowerblue;
+            right: 300px;
+            top: 200px;
+            position: absolute;
+            background-color: white;
+        }
+        .footer_bar{
+            padding-left: 10px;
+        }
+        .btn_close{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding:5px 10px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    </style>
 </body>
 
 </html>

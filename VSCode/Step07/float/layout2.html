@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 1200px;
+            border: 1px solid black;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            width: 1200px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 0px;
+            text-align: center;
+        }
+
+        li {
+            width: 200px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 16px;
+            width: 100%;
+            padding: 20px 0px;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        aside {
+            width: 20%;
+            border: 1px solid black;
+            float: left;
+            box-sizing: border-box;
+            height: 300px;
+        }
+
+        section {
+            width: calc(60% - 2px);
+            border: 1px solid black;
+            float: left;
+            height: 300px;
+        }
+
+        footer {
+            clear: both;
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header 제목 영역</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+            <li><a href="">menu5</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside>
+            <h2>aside 영역</h2>
+        </aside>
+        <section>
+            <h2>section 영역</h2>
+        </section>
+        <aside>
+            <h2>aside 영역</h2>
+        </aside>
+    </div>
+    <footer>
+        <h2>footer 영역</h2>
+    </footer>
+</body>
+
+</html>

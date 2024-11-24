@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드</title>
+    <style>
+        * {
+        margin:0;
+        padding:0;
+       }
+       .container{
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+       }
+       h1,h2,h3{
+        padding: 20px 0px;
+       }
+       header{
+        grid-column: 1 / span 6;
+        background-color: #e9e9e9;
+        text-align: center;
+       }
+       nav{
+        grid-column: 1 / span 6;
+        background-color: green;
+       }
+       ul{
+        display: flex;
+        list-style-type: none;
+        flex-flow: row nowrap;
+        justify-content: center;
+       }
+       a{
+        display: inline-block;
+        width: 200px;
+        padding:20px 0px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.4em;
+       }
+       section{
+        grid-column: 1 / span 6;
+       }
+       article{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+       }
+       .article_title{
+        grid-column: 1 / span 6;
+       }
+       .item{
+        padding-left: 10px;
+       }
+       img {
+         width: 100%;
+       }
+       footer{
+        grid-column: 1 / span 6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #e9e9e9;
+        margin-top: 20px;
+        padding:20px 50px;
+       }
+       .company, .call{
+        display: block;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2 class="article_title">article 제목</h2>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                  
+
+            </article>
+            <article>
+                <h2 class="article_title">article 제목</h2>
+               
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                    <div class="item">
+                        <img src="/resource/img/halloween.jpg" alt="썸네일 이미지">
+                        <h3>썸네일 제목</h3>
+                        <p>썸네일 내용</p>
+                    </div>
+                  
+
+            </article>
+       
+        </section>
+        <footer>
+            <ul class="company">
+                    <li>회사명 : OOOO</li>
+                    <li>대표 : OOO</li>
+                    <li>사업자번호 : OOO-OOOO-OOOOO</li>
+                    <li>통신판매업신고번호 : OOO-OOOO-OOOOO</li>
+            </ul>
+            <ul class="call">
+                    <li>고객 센터 연락처 : OO-OOOO-OOOO</li>
+                    <li>담당자 이메일 : test@gmail.com</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

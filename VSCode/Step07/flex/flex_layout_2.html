@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>레이아웃 예제</title>
+  <title>레이아웃 2</title>
   <style>
     * {
       margin: 0;
@@ -16,18 +16,11 @@
     }
 
     .flex_container {
-      /* border: 1px solid red; */
       width: 1200px;
       margin: 0 auto;
       margin-top: 30px;
       display: flex;
-      /* 요소를 플렉스 컨테이너로 설정 */
       flex-flow: column nowrap;
-      /* 
-            flex-flow : flex-direction랑 flex-wrap을 동시 적용
-            column : 요소를 세로로(위에서 아래로) 배치
-            nowrap : 줄바꿈 없이 전부 나열, 크기 조정이 자동
-            */
     }
 
     header {
@@ -46,10 +39,6 @@
       justify-content: center;
     }
 
-    /* li {
-      width: 200px;
-    } */
-
     a {
       display: inline-block;
       width: 200px;
@@ -62,7 +51,6 @@
     .container {
       display: flex;
       flex-flow: row nowrap;
-      height: 500px;
     }
 
     main {
@@ -79,14 +67,13 @@
 
     article {
       width: calc(100% / 3);
-      height: 100px;
       border: 1px solid black;
+      height: 150px;
       box-sizing: border-box;
     }
 
     aside {
       width: 20%;
-      height: 500px;
       border: 1px solid black;
     }
 
@@ -98,7 +85,8 @@
       justify-content: space-between;
     }
 
-    .logo .company_info {
+    .logo,
+    .company_info {
       width: 200px;
       height: 150px;
       border: 1px solid black;

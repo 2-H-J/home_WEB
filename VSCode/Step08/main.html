@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <style>
+        /* 모든 HTML 요소의 기본 여백과 패딩 제거 */
+        * {
+            margin: 0;
+            /* 요소의 외부 여백(간격)을 0으로 초기화 */
+            padding: 0;
+            /* 요소의 내부 여백(내용과 경계 사이의 간격)을 0으로 초기화 */
+            /*
+      CSS 초기화를 통해 브라우저 간 스타일 차이를 제거하고,
+      모든 요소가 동일한 기본 설정을 시작하도록 만듭니다.
+    */
+        }
+
+        /* 플렉스 컨테이너 스타일 */
+        .flex_container {
+            width: 1200px;
+            /* 컨테이너의 가로 너비를 1200px로 설정 */
+            display: flex;
+            /* 플렉스 박스를 사용하여 내부 요소 정렬 */
+            flex-direction: column;
+            /* 내부 요소를 세로 방향으로 정렬 */
+            margin: 0 auto;
+            /* 부모 요소 기준으로 수평 중앙 정렬 */
+            /*
+      flex-direction: column은 자식 요소를 위에서 아래로 정렬합니다.
+      margin: 0 auto를 통해 컨테이너를 중앙에 배치합니다.
+    */
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #e9e9e9;
+            /* 헤더 배경색을 밝은 회색으로 설정 */
+            display: flex;
+            /* 플렉스 박스를 사용하여 내부 요소 배치 */
+            flex-direction: row;
+            /* 내부 요소를 가로 방향으로 정렬 */
+            flex-flow: wrap;
+            /* 줄 바꿈을 허용하면서 내부 요소를 정렬 */
+            justify-content: flex-end;
+            /* 요소를 오른쪽 끝으로 정렬 */
+            /*
+      flex-flow: wrap은 내부 요소가 컨테이너 너비를 초과할 경우 줄 바꿈을 허용합니다.
+      justify-content: flex-end는 요소를 오른쪽으로 정렬합니다.
+    */
+        }
+
+        /* 멤버 바 스타일 */
+        .member_bar {
+            display: flex;
+            /* 플렉스 박스를 사용하여 내부 요소 배치 */
+            flex-direction: row;
+            /* 내부 요소를 가로 방향으로 정렬 */
+            padding: 5px 10px;
+            /* 위아래 5px, 좌우 10px의 내부 여백 설정 */
+            /*
+      flex-direction: row는 내부 요소를 가로로 정렬하며,
+      padding은 내부 텍스트와 테두리 간 간격을 제공합니다.
+    */
+        }
+
+        /* 프로필 정보 스타일 */
+        .profile_info {
+            line-height: 24px;
+            /* 텍스트 줄 간격을 24px로 설정 */
+            /*
+      line-height는 텍스트와 텍스트 간 간격을 조정하여 가독성을 높입니다.
+    */
+        }
+
+        /* 프로필 이미지 스타일 */
+        .profile {
+            display: inline-block;
+            /* 인라인 블록으로 설정하여 크기 조정 가능 */
+            width: 48px;
+            /* 프로필 이미지의 가로 너비를 48px로 설정 */
+            height: 48px;
+            /* 프로필 이미지의 높이를 48px로 설정 */
+            background-image: url('img/icon.png');
+            /* 배경 이미지 설정 */
+            background-repeat: no-repeat;
+            /* 이미지 반복 제거 */
+            background-position: -96px;
+            /* 배경 이미지 위치를 조정 */
+            /*
+      background-position: -96px은 배경 이미지의 특정 영역을 보여줍니다.
+      이미지 스프라이트 기법을 사용할 때 유용합니다.
+    */
+        }
+
+        /* 광고 이미지 컨테이너 스타일 */
+        .ad_img {
+            position: relative;
+            /* 자식 요소의 위치를 부모 요소를 기준으로 설정 */
+            font-size: 0px;
+            /* 텍스트 크기를 0으로 설정하여 간격 제거 */
+            /*
+      position: relative는 자식 요소의 위치를 부모 기준으로 배치합니다.
+      font-size: 0px은 간격 없이 이미지만 표시하도록 설정합니다.
+    */
+        }
+
+        /* 화살표 버튼 스타일 */
+        .arrow {
+            position: absolute;
+            /* 부모 요소를 기준으로 위치 설정 */
+            top: calc(50% - 24px);
+            /* 세로 중앙에 화살표 배치 */
+            background-image: url(img/icon.png);
+            /* 배경 이미지 설정 */
+            width: 48px;
+            /* 화살표 버튼의 가로 너비를 48px로 설정 */
+            height: 48px;
+            /* 화살표 버튼의 높이를 48px로 설정 */
+            border: none;
+            /* 테두리 제거 */
+            background-color: rgba(255, 255, 255, 0.5);
+            /* 반투명 흰색 배경 */
+            /*
+      calc는 화면 크기에 따라 동적 계산을 허용하여 요소를 정밀히 배치합니다.
+      rgba는 배경색의 투명도를 설정합니다.
+    */
+        }
+
+        /* 왼쪽 화살표 스타일 */
+        .left_arrow {
+            left: 0px;
+            /* 화살표를 부모 요소의 왼쪽 끝에 배치 */
+        }
+
+        /* 오른쪽 화살표 스타일 */
+        .right_arrow {
+            right: 0px;
+            /* 화살표를 부모 요소의 오른쪽 끝에 배치 */
+            transform: rotateZ(180deg);
+            /* 화살표를 180도 회전 */
+        }
+
+        /* 왼쪽 화살표 호버 스타일 */
+        .left_arrow:hover {
+            background-color: rgba(255, 255, 255, 1);
+            /* 배경색을 불투명 흰색으로 변경 */
+        }
+
+        /* 오른쪽 화살표 호버 스타일 */
+        .right_arrow:hover {
+            box-shadow: 0px 0px 5px 5px yellow inset;
+            /* 노란색 내부 그림자 추가 */
+            /*
+      box-shadow는 요소에 그림자 효과를 추가하며,
+      inset은 그림자를 내부에 적용합니다.
+    */
+        }
+
+        /* 내비게이션 스타일 */
+        nav {
+            background-color: #e9e9e9;
+            /* 내비게이션 배경색 설정 */
+        }
+
+        /* 내비게이션 리스트 스타일 */
+        nav>ul {
+            list-style-type: none;
+            /* 리스트 불릿 기호 제거 */
+            display: flex;
+            /* 플렉스 박스를 사용하여 배치 */
+            flex-flow: row nowrap;
+            /* 가로 방향으로 정렬하며 줄 바꿈 방지 */
+            justify-content: center;
+            /* 리스트 항목을 중앙 정렬 */
+        }
+
+        /* 내비게이션 링크 스타일 */
+        nav a:link,
+        nav a:visited {
+            font-size: 1.5em;
+            /* 텍스트 크기를 1.5배로 설정 */
+            font-weight: bold;
+            /* 텍스트를 굵게 설정 */
+            display: inline-block;
+            /* 인라인 블록으로 설정 */
+            width: 200px;
+            /* 링크의 가로 너비를 200px로 설정 */
+            text-align: center;
+            /* 텍스트를 가로 중앙 정렬 */
+            padding: 20px 0px;
+            /* 위아래 20px의 내부 여백 설정 */
+            text-decoration: none;
+            /* 링크의 밑줄 제거 */
+            color: black;
+            /* 텍스트 색상을 검정으로 설정 */
+        }
+
+        /* 내비게이션 링크 호버 스타일 */
+        nav a:hover {
+            background-color: gray;
+            /* 배경색을 회색으로 변경 */
+        }
+
+        /* 섹션 스타일 */
+        section {
+            margin-top: 15px;
+            /* 위쪽 여백을 15px로 설정 */
+            display: flex;
+            /* 플렉스 박스를 사용하여 배치 */
+            flex-flow: row nowrap;
+            /* 가로 방향으로 정렬하며 줄 바꿈 방지 */
+            justify-content: space-evenly;
+            /* 항목 간의 간격을 동일하게 설정 */
+        }
+
+        /* 아티클 제목 스타일 */
+        article h2 {
+            text-align: center;
+            /* 제목을 중앙 정렬 */
+            margin-bottom: 20px;
+            /* 아래쪽 여백을 20px로 설정 */
+        }
+
+        /* 아티클 테이블 스타일 */
+        article table {
+            width: 400px;
+            /* 테이블의 가로 너비를 400px로 설정 */
+            border-collapse: collapse;
+            /* 테두리를 병합하여 하나로 보이도록 설정 */
+        }
+
+        /* 테이블 셀 스타일 */
+        article table th,
+        article table td {
+            padding: 10px;
+            /* 셀 내부 여백을 10px로 설정 */
+            text-align: center;
+            /* 텍스트를 중앙 정렬 */
+            border-top: 1px solid #e9e9e9;
+            /* 셀 상단 테두리를 회색으로 설정 */
+            border-bottom: 1px solid #e9e9e9;
+            /* 셀 하단 테두리를 회색으로 설정 */
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #e9e9e9;
+            /* 푸터 배경색 설정 */
+            margin-top: 20px;
+            /* 위쪽 여백을 20px로 설정 */
+            padding: 20px 50px;
+            /* 내부 여백을 상하 20px, 좌우 50px로 설정 */
+        }
+
+        /* 푸터 리스트 스타일 */
+        footer ul {
+            list-style-type: none;
+            /* 리스트 불릿 기호 제거 */
+        }
+
+        /* 푸터 리스트 항목 스타일 */
+        footer ul li {
+            margin-top: 10px;
+            /* 위쪽 여백을 10px로 설정 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="member_bar">
+                <div><a href="" class="profile"></a></div>
+                <div class="profile_info">
+                    OOO님이 로그인 하셨습니다.<br>
+                    로그아웃 | 정보수정
+                </div>
+            </div>
+            <div class="ad_img">
+                <img src="img/main_4.jpg" alt="">
+                <button class="arrow left_arrow" type="button"></button>
+                <button class="arrow right_arrow" type="button"></button>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="">예약</a></li>
+                <li><a href="">펜션 스토리</a></li>
+                <li><a href="">펜션 소개</a></li>
+                <li><a href="sub_page.html">오시는 길</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>공지사항</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>제목1</td>
+                            <td>2021-07-26</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>제목2</td>
+                            <td>2021-07-25</td>
+                            <td>543</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>제목3</td>
+                            <td>2021-07-23</td>
+                            <td>331</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>제목4</td>
+                            <td>2021-07-22</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>제목5</td>
+                            <td>2021-07-21</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h2>이벤트</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>제목1</td>
+                            <td>2021-07-26</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>제목2</td>
+                            <td>2021-07-25</td>
+                            <td>543</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>제목3</td>
+                            <td>2021-07-23</td>
+                            <td>331</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>제목4</td>
+                            <td>2021-07-22</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>제목5</td>
+                            <td>2021-07-21</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li>OOOO 펜션</li>
+                <li>대표자 : OOOO</li>
+                <li>연락처 : <a href="tel:010-0000-0000">010-0000-0000</a></li>
+                <li>주소 : 강원도 평창시 OOOOOOOOO</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브 페이지</title>
+    <style>
+        /* 모든 HTML 요소의 기본 여백과 패딩 제거 */
+        * {
+            margin: 0;
+            /* 요소의 외부 여백을 0으로 초기화 */
+            padding: 0;
+            /* 요소의 내부 여백을 0으로 초기화 */
+            /*
+      margin과 padding을 초기화하여 브라우저 간 기본 스타일 차이를 제거합니다.
+      이로 인해 모든 요소가 동일한 기본 설정에서 시작하게 됩니다.
+    */
+        }
+
+        /* 플렉스 컨테이너 스타일 */
+        .flex_container {
+            width: 1200px;
+            /* 컨테이너의 가로 너비를 1200px로 설정 */
+            display: flex;
+            /* Flexbox 레이아웃 활성화 */
+            flex-direction: column;
+            /* 내부 요소를 세로 방향으로 정렬 */
+            margin: 0 auto;
+            /* 부모 요소 기준으로 수평 중앙 정렬 */
+            /*
+      flex-direction: column은 내부 요소를 위에서 아래로 정렬합니다.
+      margin: 0 auto를 통해 컨테이너를 부모 요소의 중앙에 배치합니다.
+    */
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #e9e9e9;
+            /* 헤더 배경색을 밝은 회색으로 설정 */
+            display: flex;
+            /* Flexbox를 사용하여 내부 요소 배치 */
+            flex-direction: row;
+            /* 내부 요소를 가로 방향으로 정렬 */
+            flex-flow: wrap;
+            /* 내부 요소를 줄 바꿈 가능하도록 설정 */
+            justify-content: flex-end;
+            /* 내부 요소를 오른쪽 끝으로 정렬 */
+            /*
+      flex-flow: wrap은 공간이 부족할 경우 줄 바꿈을 허용합니다.
+      justify-content: flex-end는 요소를 오른쪽 끝으로 정렬합니다.
+    */
+        }
+
+        /* 멤버 바 스타일 */
+        .member_bar {
+            display: flex;
+            /* Flexbox를 사용하여 내부 요소를 배치 */
+            flex-direction: row;
+            /* 내부 요소를 가로 방향으로 정렬 */
+            padding: 5px 10px;
+            /* 위아래 5px, 좌우 10px의 내부 여백 추가 */
+            /*
+      padding은 내부 텍스트와 테두리 간의 간격을 제공합니다.
+      flex-direction: row는 요소를 가로로 정렬합니다.
+    */
+        }
+
+        /* 프로필 정보 스타일 */
+        .profile_info {
+            line-height: 24px;
+            /* 텍스트 줄 간격을 24px로 설정 */
+            /*
+      line-height는 텍스트의 세로 간격을 조정하여 가독성을 높입니다.
+    */
+        }
+
+        /* 프로필 아이콘 스타일 */
+        .profile {
+            display: inline-block;
+            /* 인라인 블록으로 설정하여 크기 조정 가능 */
+            width: 48px;
+            /* 프로필 아이콘의 가로 너비를 48px로 설정 */
+            height: 48px;
+            /* 프로필 아이콘의 높이를 48px로 설정 */
+            background-image: url('img/icon.png');
+            /* 프로필 아이콘 이미지 설정 */
+            background-repeat: no-repeat;
+            /* 배경 이미지 반복 제거 */
+            background-position: -96px;
+            /* 배경 이미지 위치 조정 */
+            /*
+      background-image는 이미지 파일을 아이콘으로 설정합니다.
+      background-position은 이미지에서 특정 위치를 잘라 표시합니다.
+    */
+        }
+
+        /* 광고 이미지 컨테이너 스타일 */
+        .ad_img {
+            position: relative;
+            /* 자식 요소의 위치를 기준으로 설정 */
+            font-size: 0px;
+            /* 텍스트 크기를 0으로 설정하여 여백 제거 */
+            /*
+      position: relative는 자식 요소의 배치를 기준으로 부모의 위치를 유지합니다.
+    */
+        }
+
+        /* 화살표 버튼 스타일 */
+        .arrow {
+            position: absolute;
+            /* 부모 요소를 기준으로 위치 설정 */
+            top: calc(50% - 24px);
+            /* 화살표를 세로 중앙에 배치 */
+            background-image: url(img/icon.png);
+            /* 화살표 배경 이미지 설정 */
+            width: 48px;
+            /* 화살표의 가로 너비를 48px로 설정 */
+            height: 48px;
+            /* 화살표의 높이를 48px로 설정 */
+            border: none;
+            /* 테두리 제거 */
+            background-color: rgba(255, 255, 255, 0.5);
+            /* 반투명 흰색 배경 */
+            /*
+      calc는 동적 계산을 허용하여 화면의 중앙에 요소를 배치합니다.
+      rgba는 투명도를 포함한 색상을 설정합니다.
+    */
+        }
+
+        /* 왼쪽 화살표 스타일 */
+        .left_arrow {
+            left: 0px;
+            /* 부모 요소의 왼쪽에 정렬 */
+        }
+
+        /* 오른쪽 화살표 스타일 */
+        .right_arrow {
+            right: 0px;
+            /* 부모 요소의 오른쪽에 정렬 */
+            transform: rotateZ(180deg);
+            /* 화살표를 180도 회전 */
+            /*
+      transform은 화살표를 반대로 뒤집어 표시합니다.
+    */
+        }
+
+        /* 왼쪽 화살표 호버 스타일 */
+        .left_arrow:hover {
+            background-color: rgba(255, 255, 255, 1);
+            /* 불투명 흰색 배경 */
+        }
+
+        /* 오른쪽 화살표 호버 스타일 */
+        .right_arrow:hover {
+            box-shadow: 0px 0px 5px 5px yellow inset;
+            /* 노란색 내부 그림자 추가 */
+            /*
+      box-shadow는 요소에 그림자 효과를 추가합니다.
+      inset은 그림자가 내부로 적용되도록 설정합니다.
+    */
+        }
+
+        /* 내비게이션 스타일 */
+        nav {
+            background-color: #e9e9e9;
+            /* 내비게이션 배경색 설정 */
+        }
+
+        /* 내비게이션 리스트 스타일 */
+        nav>ul {
+            list-style-type: none;
+            /* 기본 리스트 불릿 기호 제거 */
+            display: flex;
+            /* Flexbox를 사용하여 배치 */
+            flex-flow: row nowrap;
+            /* 가로 방향으로 정렬하고 줄 바꿈 방지 */
+            justify-content: center;
+            /* 리스트 항목을 중앙 정렬 */
+            /*
+      flex-flow는 요소를 가로 방향으로 정렬하며 줄 바꿈을 방지합니다.
+    */
+        }
+
+        /* 내비게이션 링크 스타일 */
+        nav a:link,
+        nav a:visited {
+            font-size: 1.5em;
+            /* 텍스트 크기를 1.5배로 설정 */
+            font-weight: bold;
+            /* 텍스트를 굵게 설정 */
+            display: inline-block;
+            /* 인라인 블록으로 설정 */
+            width: 200px;
+            /* 링크의 가로 너비를 200px로 설정 */
+            text-align: center;
+            /* 텍스트를 중앙 정렬 */
+            padding: 20px 0px;
+            /* 위아래 여백을 20px로 설정 */
+            text-decoration: none;
+            /* 링크의 밑줄 제거 */
+            color: black;
+            /* 텍스트 색상을 검정으로 설정 */
+            /*
+      a:link는 방문하지 않은 링크의 스타일을 정의합니다.
+      a:visited는 방문한 링크의 스타일을 정의합니다.
+    */
+        }
+
+        /* 내비게이션 링크 호버 스타일 */
+        nav a:hover {
+            background-color: gray;
+            /* 배경색을 회색으로 변경 */
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        main {
+            padding: 20px 30px 10px 30px;
+            /* 상 20px, 좌우 30px, 하단 10px 내부 여백 설정 */
+            /*
+      padding은 콘텐츠와 테두리 간의 내부 여백을 설정하여 가독성을 높입니다.
+    */
+        }
+
+        /* 아티클 스타일 */
+        article {
+            display: flex;
+            /* Flexbox를 사용하여 배치 */
+            flex-flow: row nowrap;
+            /* 가로 방향으로 정렬하고 줄 바꿈 방지 */
+            gap: 10px;
+            /* 아티클 항목 간의 간격을 10px로 설정 */
+            /*
+      gap은 Flexbox에서 항목 간의 간격을 균등하게 설정합니다.
+    */
+        }
+
+        /* 아티클 이미지 스타일 */
+        article img {
+            width: 60%;
+            /* 이미지를 부모 요소 너비의 60%로 설정 */
+        }
+
+        /* 아티클 텍스트 스타일 */
+        .road_text {
+            width: 40%;
+            /* 텍스트 영역을 부모 요소 너비의 40%로 설정 */
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #e9e9e9;
+            /* 푸터 배경색 설정 */
+            margin-top: 20px;
+            /* 위쪽 여백을 20px로 설정 */
+            padding: 20px 50px;
+            /* 내부 여백을 상하 20px, 좌우 50px로 설정 */
+        }
+
+        /* 푸터 리스트 스타일 */
+        footer ul {
+            list-style-type: none;
+            /* 기본 리스트 불릿 기호 제거 */
+        }
+
+        /* 푸터 리스트 항목 스타일 */
+        footer ul li {
+            margin-top: 10px;
+            /* 위쪽 여백을 10px로 설정 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex_container">
+        <header>
+            <div class="member_bar">
+                <div><a href="" class="profile"></a></div>
+                <div class="profile_info">
+                    OOO님이 로그인 하셨습니다.<br>
+                    로그아웃 | 정보수정
+                </div>
+            </div>
+            <div class="ad_img">
+                <img src="img/main_4.jpg" alt="">
+                <button class="arrow left_arrow" type="button"></button>
+                <button class="arrow right_arrow" type="button"></button>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="">예약</a></li>
+                <li><a href="">펜션 스토리</a></li>
+                <li><a href="">펜션 소개</a></li>
+                <li><a href="sub_page.html">오시는 길</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <img src="/resource/img/cat-9138461_1280.jpg" alt="펜션 지도">
+                <div class="road_text">
+                    <h2>오시는 길</h2>
+                    <p>모든 국민은 직업선택의 자유를 가진다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수
+                        없다.
+                        모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 군인은 현역을 면한 후가
+                        아니면 국무위원으로 임명될 수 없다.</p>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <ul>
+                <li>OOOO 펜션</li>
+                <li>대표자 : OOOO</li>
+                <li>연락처 : <a href="tel:010-0000-0000">010-0000-0000</a></li>
+                <li>주소 : 강원도 평창시 OOOOOOOOO</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

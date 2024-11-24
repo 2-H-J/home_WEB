@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
+    *{
+      margin:0;
+      padding:0;
     }
-
-    body {
-      border: 5px solid red;
-      height: 100vh;
-      /* vh(ViewportHeight) : 뷰포트의 세로 단위 1vh는 뷰포트 길이의 100분의 1 */
-      /* height: 100vh : 화면 해상도 세로길이의 100% 만큼 사용 */
-      box-sizing: border-box;
-    }
-
-    .container {
-      border: 5px solid blue;
-      height: 50%;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-    }
-
-    .box1 {
-      border: 1px solid black;
-      height: 50%;
-      width: 50%;
-      box-sizing: border-box;
-    }
+   body{
+    border:5px solid red;
+    /* vh : 뷰포트의 세로 단위 1vw는 뷰포트 세로 길이의 100분의 1 */
+    height: 100vh;
+    box-sizing: border-box;
+   }
+   .container{
+    height: 50%;
+    border:5px solid blue;
+    box-sizing: border-box;
+   }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="box1"></div>
-  </div>
+  <div class="container"></div>
 </body>
-
 </html>

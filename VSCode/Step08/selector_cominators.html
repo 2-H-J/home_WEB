@@ -1,255 +1,176 @@
 <!DOCTYPE html>
 
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자</title>
     <style>
         /* 
-            자식 선택자 
-                형식: 선택자 > 선택자
-                특정 요소의 직계 자식 요소에만 스타일을 적용합니다.
+            자식 선택자
+                선택자 > 선택자{
+                    속성 : 값;
+                }
         */
-        h2>span {
-            color: red;
-            /* h2의 자식 span에 빨간 글자색 적용 */
+        h2 > span{
+            color:red;
         }
-
-        /* p 태그의 직계 자식 요소 중 span에만 밑줄을 적용 */
-        p>span {
+        /* p 태그에 있는 자식 요소중 span에만 밑줄 적용 */
+        p > span{
             text-decoration: underline;
-            /* p의 자식인 span에 밑줄을 적용 */
         }
-
-        /* body 안의 ul 요소의 자식 li 태그에 굵은 글씨를 적용 */
-        body ul>li {
+        body ul > li {
             font-weight: bold;
-            /* ul의 직계 자식 li에 굵은 글씨 적용 */
         }
-
         /* 
-            자손 선택자 
-                형식: 선택자 선택자
-                특정 요소의 모든 자손 요소(직계 자식뿐만 아니라 모든 하위 자손)에 스타일을 적용합니다.
+        자손 선택자
+            선택자 선택자{
+                속성 : 값;
+            }  
         */
-        .container li {
-            color: blueviolet;
-            /* .container 클래스 내 모든 li 태그에 보라색 글자색 적용 */
+        .container li{
+            color:blueviolet;
         }
-
-        body ul {
-            border: 1px solid black;
-            /* body 내 모든 ul에 검정색 테두리 적용 */
+        body ul{ 
+            border:1px solid black;
         }
-
-        /* ul의 모든 자손 li에 취소선 적용하려는 스타일은 주석처리되어 있음 */
-        /* ul li { text-decoration: line-through; } */
-
-        /* 
-            인접 형제 선택자 (Adjacent Sibling Selector) 
-                형식: 선택자 + 선택자
-                특정 요소 바로 다음에 오는 형제 요소에 스타일을 적용합니다.
-        */
-        .brother1 {
+        /* ul li {
+            text-decoration: line-through;
+        } */
+         /* 
+            동생 요소 선택자
+        
+            선택자+선택자{
+                속성 : 값;
+            }
+         */
+         .brother1{
             background-color: yellow;
-            /* brother1 클래스에 노란 배경색 적용 */
-        }
-
-        .brother1+li {
+         }
+         .brother1+li{
             text-decoration: underline;
-            /* brother1의 다음 li에 밑줄 적용 */
-        }
-
-        /* 
-            일반 형제 선택자 (General Sibling Selector) 
-                형식: 선택자 ~ 선택자
-                특정 요소 이후의 모든 형제 요소에 스타일을 적용합니다.
-        */
-        .brother2 {
+         }
+         .brother2{
             background-color: orange;
-            /* brother2 클래스에 주황색 배경색 적용 */
-        }
-
-        .brother2~li {
+         }
+         .brother2~li{
             color: red;
-            /* brother2 이후 모든 li에 빨간 글자색 적용 */
-        }
-
-        /* 
-            종속 선택자 (Class Selector, ID Selector) 
-                클래스나 아이디에 따라 특정 요소에 스타일을 적용합니다.
-        */
-        p.bold {
+         }
+         /* 종속 선택자 */
+         p.bold{
             font-weight: bold;
-            /* .bold 클래스가 있는 p에 굵은 글씨 적용 */
-        }
-
-        li#under {
+         }
+         li#under{
             text-decoration: underline;
-            /* id가 under인 li에 밑줄 적용 */
-        }
+         }
+         /* 
+            의사(가상) 클래스
+                태그의 특정한 상태, 상황을 만족했을때 선택가능하게하는 키워드
 
-        /* 
-            가상 클래스 (Pseudo-class)
-                특정 상태(마우스 상태, 포커스 상태 등)에 따른 스타일을 정의합니다.
-        */
-        /* 링크에 스타일을 적용하는 가상 클래스 */
-        a:link {
+            예> 마우스를 특정 태그에 클릭 했을때
+                마우스를 특정 영역에 올리면 배경 이미지(아이콘)가 바뀌는 경우
+         */
+         /* 하이퍼링크가 걸려있을때 */
+         a:link{
             text-decoration: none;
-            /* 링크를 클릭하기 전 상태에서 밑줄 제거 */
             color: crimson;
-            /* 링크 클릭 전 상태의 색을 진홍색으로 설정 */
-        }
-
-        a:visited {
+         }
+         /* 해당 링크를 클릭해서 방문한적이 있을때 */
+         a:visited{
             text-decoration: none;
-            /* 방문한 후에도 밑줄 제거 */
             color: crimson;
-            /* 방문한 후에도 진홍색 유지 */
-        }
+         }
 
-        a:link,
-        a:visited {
+         a:link,a:visited{
             font-weight: bold;
-            /* 링크의 방문 여부와 관계없이 굵은 글씨 적용 */
-        }
-
-        /* 마우스를 해당 태그에 올렸을 때 */
-        a:hover {
+         }
+         /* 마우스를 해당 태그 및 선택자에 올렸을때 */
+         a:hover{
             background-color: aquamarine;
-            /* 마우스를 올린 링크에 연한 청록색 배경색 적용 */
-        }
-
-        a:link:hover {
+         }
+         /* 하이퍼링크에 마우스를 올렸을때 */
+         a:link:hover{
             text-decoration: line-through;
-            /* 클릭 전 링크에 마우스를 올리면 취소선 적용 */
-        }
-
-        /* 마우스를 h2에 올리면 밑줄을 나타내기 */
-        h2:hover {
-            text-decoration: line-through;
-            /* 마우스를 올리면 밑줄이 나타나도록 */
-        }
-
-        /* ul에 마우스를 올리면 배경 이미지 적용 */
-        ul:hover {
-            background: url("/resource/img/Dogimg.jpg") no-repeat center center;
-            background-size: auto 300px;
-            /* 이미지가 ul의 중심에 나타나고 300px 크기로 맞춰짐 */
-        }
-
-        /* ol 태그의 자식 li에 마우스를 올렸을 때 노란 배경색 적용 */
-        ol>li:hover {
-            background-color: yellow;
-            /* 마우스를 올리면 li의 배경을 노란색으로 변경 */
-        }
-
-        /* 
-            마우스를 클릭했을 때 (active 상태) 
-            - 가상 클래스 중 마우스 클릭 시 적용되는 스타일 정의
-        */
-        a:active {
+         }
+        /*  h2에 마우스가 올라가면 밑줄이 나타나게끔 처리  */
+         h2:hover{
+            text-decoration: underline;
+         }
+        /* ul에 마우스가 올라가면 원하는 배경색이 나오게끔 처리 */
+         ul:hover{
+            background-color: chartreuse;
+         }
+        /* ol 태그의 자식 li에 마우스가 올라갔을때 원하는 배경색이 나오게끔 처리 */
+         ol > li:hover{
+            background-color: chocolate;
+         }
+         /* 마우스 클릭 했을때 */
+         a:active{
             background-color: blue;
-            /* 클릭 중인 링크에 파란 배경색 적용 */
-            color: white;
-            /* 글자색은 흰색으로 변경 */
-        }
-
-        /* 특정 요소가 포커스 상태일 때 스타일 적용 */
-        /* p 태그의 자식 중 id가 txt인 input 요소가 포커스 상태일 때 */
-        p>#txt:focus {
-            background-color: brown;
-            /* 포커스된 요소의 배경을 갈색으로 변경 */
+         }
+         /* 해당 태그가 선택이 되었때 */
+         input:focus{
+            background-color: darkcyan;
             outline: none;
-            /* 포커스 테두리 제거 */
-        }
-
-        /* 비활성화된 상태의 요소에 스타일 적용 */
-        #t2:disabled {
+         }
+         /* disabled : 비활성화된 상태 */
+         input:disabled{
             background-color: red !important;
-            /* 비활성화된 상태의 배경을 빨간색으로 강제 적용 */
-            /* !important는 해당 스타일을 우선 적용하는 키워드로, 다른 스타일 규칙을 무시하고 강제 적용 */
-        }
-
-        /* p 태그의 자식 중 id가 t3인 읽기 전용 input 요소에 스타일 적용 */
-        p>#t3:read-only {
+         }
+         /* 읽기 전용 */
+        input:read-only{
             border: 2px solid blue;
-            /* 테두리를 파란색 두께 2px로 설정 */
             background-color: bisque;
-            /* 배경색을 비스크 색으로 설정 */
         }
-
-        /* 필수 입력 필드에 스타일 적용 */
-        #t4:required {
+        /* 반드시 입력해야하는 경우 */
+        input:required{
             border: 2px solid brown;
-            /* 필수 입력 필드의 테두리를 갈색으로 설정 */
         }
 
-        /* 체크박스(라디오버튼)가 체크된 상태일때 */
-        #chk:checked {
+        /* 체크박스(라디오버튼)가 체크된 상태 */
+        #chk:checked{
             width: 100px;
             height: 100px;
         }
-
-        #chk:checked+label {
+        #chk:checked+label{
             background-color: chocolate;
-            /* 체크박스가 선택된 상태일 때 label의 배경색을 변경 */
         }
 
         /* 
-        첫 번째 자식 요소만 선택
-            선택된 태그가 전체 자식 중 첫 번째 자식일 경우만 선택
+            첫번째 자식 요소만 선택
+                선택된 태그가 첫번째 자식일 경우만 선택
         */
-        .container1>p:first-child {
-            color: crimson;
-            /* .container1 클래스의 첫 번째 p 태그에 진홍색 글자색 적용 */
+        .container1 > p:first-child{
+            color:crimson;
         }
-
-        /* 
-            마지막 자식 요소만 선택
-                선택된 태그가 전체 자식 중 마지막 자식일 경우만 선택
-        */
-        .container1>p:last-child {
-            color: cadetblue;
-            /* .container1 클래스의 마지막 p 태그에 청록색 글자색 적용 */
-        }
-
-        /* 
-            첫 번째 p 요소 선택 (같은 태그 중 첫 번째 요소만 선택)
-                선택된 태그가 동일한 타입(p 태그) 중에서 첫 번째 요소일 경우만 선택
-        */
-        /* 선택된 그룹별 태그중 첫번째 것만 선택 */
-        .container1>p:first-of-type {
+        /* 선택된 그룹별 태그 중 첫번째 것만 선택*/
+        .container1 > p:first-of-type{
             text-decoration: underline;
-            /* .container1 클래스의 첫 번째 p 태그에 밑줄 적용 */
+        }
+        /* 선택된 태그가 마지막 자식일 경우만 선택 */
+        .container1 > p:last-child{
+            color:blueviolet;
         }
         /* 선택된 그룹별 태그 중 마지막 것만 선택 */
-        .container1>p:last-of-type {
-            text-decoration: underline;
-            /* .container1 클래스의 첫 번째 p 태그에 밑줄 적용 */
+        .container1 > p:last-of-type{
+            text-decoration: line-through;
         }
-
-        /* 부모의 n번째 자식 요소에 스타일을 적용합니다. */
+         /* 원하는 n번째 자식 요소만 선택 */
         .container1 > p:nth-child(3){
             text-decoration: line-through dashed;
         }
-
-        /* 홀수/짝수 번째 자식 선택 */
+        /* 홀수/짝수 번째 자식 요소 선택 */
         .container1 > p:nth-child(2n){
             background-color: gold;
         }
         .container1 > p:nth-child(2n+1){
-            background-color: beige;
+            background-color: greenyellow;
         }
-
         /* 무리별로 해당 순번에 있는 요소 선택 */
         .container1 > p:nth-of-type(3){
             font-style: italic;
         }
-
-        /* 3번째 요소 이후에 있는 모든 p태그 선택 */
+        /* 3번째 요소 이후에 있는 모든 p 태그 선택 */
         .container1 > p:nth-of-type(3) ~ p{
             font-weight: bold;
         }
@@ -258,26 +179,19 @@
             color: blueviolet;
             font-weight: bold;
         }
-        /* 선택한 요소의 마지막에 내용을 추가하는 css */
+        /* 선택한 요소의 마지막에 내용을 추가하는 CSS */
         .after li::after{
-            content: "다음 줄로 →";
-            color: cornflowerblue;
+            content: "← 다음 줄로";
+            color : cornflowerblue;
             text-decoration: underline;
-            background-image: url(/resource/icon/homeICON.png);
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 50px center;
         }
-
-        /* 선택한 요소의 맨앞에 내용을 추가하는 css */
+        /* 선택한 요소의 맨앞에 내용을 추가하는 CSS */
         .after li::before{
-            content: "시작 내용";
-            color: red;
+            content: "시작 내용 : ";
+            color:tomato;
         }
-
     </style>
 </head>
-
 <body>
     <h2><span>자식</span> 선택자</h2>
     <p class="bold">중앙선거관리위원회는 대통령이 임명하는 3인, 국회에서 선출하는 3인과 대법원장이 지명하는 3인의 위원으로 구성한다. 위원장은 위원중에서 호선한다.</p>
@@ -303,7 +217,7 @@
             </ol>
         </ul>
         <ol>
-            <li>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</li>
+            <li class="bold">근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</li>
             <li>명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.</li>
             <li>연소자의 근로는 특별한 보호를 받는다. 헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다.</li>
             <li>선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다.</li>
@@ -333,8 +247,7 @@
     <hr>
     <h2>가상(의사) 클래스</h2>
     <!--콘텐트의 특정 상태에 따른 스타일 지정-->
-    <p>군인 또는 군무원이 아닌 국민은 <a href="#">대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄</a>중 <a>법률</a>이 정한 경우와 비상계엄이 선포된
-        경우를
+    <p>군인 또는 군무원이 아닌 국민은 <a href="#">대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄</a>중 <a>법률</a>이 정한 경우와 비상계엄이 선포된 경우를
         제외하고는 군사법원의 재판을 받지
         아니한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.</p>
     <p>
@@ -345,7 +258,6 @@
         <input type="text" id="t4" placeholder=":required 상태" required><br>
 
     </p>
-    <hr>
     <div class="container1">
         <h2>서브 제목</h2>
         <p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p>
@@ -356,26 +268,24 @@
         <p>환경권의 내용과 행사에 관하여는 법률로 정한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다.</p>
         <p>체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피
             또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.</p>
-            <p>대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
-            <p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
-            <p>제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
-            <p>대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
-        </div>
-        <hr>
-        <div class="container1">
-            <p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p>
-            <p>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.
-            </p>
-            <p>국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다.</p>
-            <p>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
-            <p>환경권의 내용과 행사에 관하여는 법률로 정한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다.</p>
-            <p>체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피
-                또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.</p>
-                <p>대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
-                <p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
-                <p>제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
-                <p>대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
-                <h2>서브 제목</h2>
+        <p>대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
+        <p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
+        <p>제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
+        <p>대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
+    </div>
+    <div class="container1">
+        <p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p>
+        <p>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.
+        </p>
+        <p>국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다.</p>
+        <p>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
+        <p>환경권의 내용과 행사에 관하여는 법률로 정한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다.</p>
+        <p>체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피
+            또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.</p>
+        <p>대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
+        <p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
+        <p>제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
+        <p>대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
     </div>
     <hr>
     <h2>의사 요소</h2>
@@ -395,5 +305,4 @@
 
     </ol>
 </body>
-
 </html>

@@ -6,71 +6,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
   <style>
+    /* 모든 HTML 요소의 기본 여백과 패딩 제거 */
     * {
       margin: 0;
+      /* 요소의 외부 여백(간격)을 0으로 초기화 */
       padding: 0;
+      /* 요소의 내부 여백(내용과 경계 사이의 간격)을 0으로 초기화 */
+      /*
+    CSS 초기화는 브라우저마다 기본 스타일이 다르므로,
+    모든 요소를 동일한 기준에서 스타일링할 수 있도록 만듭니다.
+  */
     }
 
+    /* h1 태그의 스타일 */
     h1 {
       text-align: center;
+      /* 텍스트를 가로 방향으로 중앙 정렬 */
       margin: 20px 0;
+      /* 위와 아래에 각각 20px의 외부 여백 추가 */
+      /*
+    text-align 속성은 텍스트의 가로 정렬 방식을 결정합니다.
+    margin은 요소의 외부에 공간을 추가하여 정렬과 간격을 조정합니다.
+  */
     }
 
+    /* 테이블 스타일 */
     table {
       border-collapse: collapse;
+      /* 테이블 셀 간의 테두리를 하나로 병합 */
       margin: 0 auto;
+      /* 테이블을 수평 방향으로 중앙 정렬 */
       border: none;
+      /* 테이블 자체의 테두리를 제거 */
+      /*
+    border-collapse: collapse는 테이블 셀 간의 이중 테두리를 제거합니다.
+    margin: 0 auto는 테이블이 부모 컨테이너의 중앙에 위치하도록 설정합니다.
+  */
     }
 
+    /* 테이블 셀(td) 스타일 */
     td {
       padding: 10px;
+      /* 셀 내부에 10px의 간격 추가 */
       font-size: 18px;
+      /* 셀 내 텍스트 크기를 18px로 설정 */
       border: none;
+      /* 셀 테두리를 제거 */
+      /*
+    padding은 텍스트와 셀 경계 사이의 간격을 추가하여 가독성을 높입니다.
+    font-size는 텍스트 크기를 지정하여 읽기 쉬운 크기로 만듭니다.
+  */
     }
 
+    /* 입력 필드 스타일 */
     input {
       width: 300px;
+      /* 입력 필드의 가로 너비를 300px로 설정 */
       font-size: 18px;
+      /* 입력 필드 내 텍스트 크기를 18px로 설정 */
       padding: 5px 10px;
+      /* 입력 필드 내부 여백을 상하 5px, 좌우 10px으로 설정 */
+      /*
+    width는 입력 필드의 가로 크기를 설정합니다.
+    padding은 입력 필드 내부의 텍스트와 경계 사이의 간격을 조정합니다.
+    font-size는 입력된 텍스트의 크기를 조정하여 가독성을 높입니다.
+  */
     }
 
+    /* 텍스트 영역 스타일 */
     textarea {
       width: 100%;
+      /* 텍스트 영역의 가로 너비를 부모 요소의 100%로 설정 */
       padding: 10px;
+      /* 내부에 10px 간격을 추가 */
       height: 300px;
+      /* 텍스트 영역의 세로 높이를 300px로 설정 */
       box-sizing: border-box;
+      /* 패딩과 테두리를 포함한 크기를 계산 */
       resize: none;
+      /* 사용자가 텍스트 영역 크기를 조정하지 못하도록 설정 */
+      /*
+    box-sizing: border-box는 width와 height에 padding과 border를 포함시켜 크기를 계산합니다.
+    resize: none은 사용자가 텍스트 영역의 크기를 변경하지 못하도록 설정합니다.
+  */
     }
 
+    /* 버튼 스타일 */
     button {
       width: 135px;
+      /* 버튼의 가로 너비를 135px로 설정 */
       padding: 10px 0px;
+      /* 버튼 내부 여백을 상하 10px, 좌우 0px으로 설정 */
+      /*
+    width는 버튼의 가로 크기를 제한합니다.
+    padding은 버튼 내부 텍스트와 경계 사이의 간격을 설정합니다.
+  */
     }
 
+    /* 드롭다운(select) 스타일 */
     select {
       font-size: 18px;
+      /* 드롭다운 메뉴의 텍스트 크기를 18px로 설정 */
       padding: 5px 10px;
+      /* 드롭다운 내부 여백을 상하 5px, 좌우 10px으로 설정 */
+      /*
+    font-size는 드롭다운 메뉴의 옵션 텍스트 가독성을 높이는 데 사용됩니다.
+    padding은 옵션과 드롭다운 경계 사이의 간격을 조정합니다.
+  */
     }
 
+    /* 연락처 입력 필드 스타일 */
     input[name*="tel"] {
       width: 95px;
+      /* 입력 필드의 가로 너비를 95px로 설정 */
       text-align: center;
+      /* 입력된 텍스트를 가로 방향으로 중앙 정렬 */
+      /*
+    width는 입력 필드의 크기를 제한하여 전화번호 형식을 적절히 유지합니다.
+    text-align: center는 입력 텍스트를 필드 중앙에 배치합니다.
+  */
     }
 
+    /* 이메일 입력 필드 스타일 */
     input[name*="email"] {
       width: 130px;
+      /* 이메일 입력 필드의 가로 너비를 130px로 설정 */
       text-align: center;
+      /* 입력된 텍스트를 가로 방향으로 중앙 정렬 */
+      /*
+    이메일 사용자명을 입력하는 필드로, 적절한 크기와 정렬을 제공합니다.
+  */
     }
 
+    /* 이메일 도메인 드롭다운 스타일 */
     select[name*="email"] {
       width: 140px;
+      /* 드롭다운 메뉴의 가로 너비를 140px로 설정 */
       text-align: center;
+      /* 선택된 텍스트를 가로 방향으로 중앙 정렬 */
+      /*
+    width는 다양한 이메일 도메인에 적합한 크기를 설정합니다.
+    text-align은 선택된 옵션이 메뉴 중앙에 위치하도록 정렬합니다.
+  */
     }
 
+    /* 체크박스와 라디오 버튼 크기 및 간격 설정 */
     input[type="checkbox"],
     input[type="radio"] {
       width: 16px;
+      /* 체크박스와 라디오 버튼의 가로 너비를 16px로 설정 */
       margin-left: 20px;
+      /* 왼쪽에 20px 간격 추가 */
+      /*
+    width는 버튼 크기를 표준 크기로 설정하여 일관성을 유지합니다.
+    margin-left는 버튼과 관련 텍스트 또는 다른 요소 사이의 공간을 확보합니다.
+  */
     }
   </style>
 </head>

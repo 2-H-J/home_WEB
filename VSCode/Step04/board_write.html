@@ -6,54 +6,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>게시판 글쓰기</title>
   <style>
+    /* 모든 HTML 요소의 기본 여백과 패딩 제거 */
     * {
       margin: 0;
+      /* 요소의 외부 여백(간격)을 0으로 초기화 */
       padding: 0;
+      /* 요소의 내부 여백(내용과 경계 사이의 간격)을 0으로 초기화 */
+      /*
+    CSS 초기화: 브라우저마다 기본적으로 적용된 여백과 패딩을 제거하여
+    동일한 스타일링 환경에서 작업할 수 있도록 만듭니다.
+  */
     }
 
+    /* h1 태그의 스타일 */
     h1 {
       text-align: center;
+      /* 텍스트를 수평 방향으로 중앙 정렬 */
       margin: 20px 0;
+      /* 위와 아래에 각각 20px의 외부 여백 추가 */
+      /*
+    text-align: center는 텍스트를 가로 방향으로 중앙에 배치합니다.
+    margin은 위아래 간격을 추가하여 배치를 조정합니다.
+  */
     }
 
+    /* 테이블 스타일 */
     table {
       border-collapse: collapse;
+      /* 테이블 셀 간의 테두리를 하나로 병합 */
       margin: 0 auto;
+      /* 테이블을 부모 요소 기준으로 수평 중앙 정렬 */
       border: none;
+      /* 테이블 자체의 테두리를 제거 */
+      /*
+    border-collapse: collapse는 테이블 셀의 테두리가 겹치지 않고
+    하나로 합쳐지도록 설정합니다.
+    margin: 0 auto는 테이블이 부모 컨테이너의 중앙에 위치하도록 합니다.
+  */
     }
 
+    /* 테이블 셀(td) 스타일 */
     td {
       padding: 10px;
+      /* 셀 내부에 10px의 간격 추가 */
       font-size: 18px;
-      /* border:1px solid black; */
+      /* 셀 내 텍스트 크기를 18px로 설정 */
       border: none;
+      /* 기본 테두리를 제거 (주석 처리된 테두리는 필요 시 활성화 가능) */
+      /*
+    padding은 셀 내부 텍스트와 경계 사이의 간격을 추가하여 가독성을 높입니다.
+    font-size는 텍스트의 크기를 적절하게 설정합니다.
+    border는 주석 처리되어 있으나, 필요에 따라 테두리를 추가할 수 있습니다.
+  */
     }
 
+    /* 입력 필드 스타일 */
     input {
       width: 300px;
+      /* 입력 필드의 가로 너비를 300px로 설정 */
       font-size: 18px;
+      /* 입력 필드 내 텍스트 크기를 18px로 설정 */
       padding: 5px 10px;
+      /* 입력 필드 내부 여백을 상하 5px, 좌우 10px으로 설정 */
+      /*
+    width는 입력 필드의 가로 크기를 제한합니다.
+    padding은 입력 필드 내부의 텍스트와 경계 사이의 간격을 조정합니다.
+    font-size는 입력된 텍스트의 가독성을 높이는 데 사용됩니다.
+  */
     }
 
+    /* 텍스트 영역 스타일 */
     textarea {
       width: 100%;
+      /* 텍스트 영역의 가로 너비를 부모 요소의 100%로 설정 */
       padding: 10px;
+      /* 내부에 10px 간격을 추가 */
       height: 300px;
+      /* 텍스트 영역의 세로 높이를 300px로 설정 */
       box-sizing: border-box;
+      /* padding과 border를 포함하여 크기를 계산 */
       resize: none;
+      /* 사용자가 텍스트 영역 크기를 조정하지 못하도록 설정 */
+      /*
+    box-sizing: border-box는 width와 height가 padding과 border를 포함하여
+    계산되도록 설정합니다.
+    resize: none은 사용자가 텍스트 영역의 크기를 변경하지 못하도록 설정합니다.
+  */
     }
 
+    /* 버튼 스타일 */
     button {
       width: 150px;
+      /* 버튼의 가로 너비를 150px로 설정 */
       padding: 10px 0px;
+      /* 버튼 내부 여백을 상하 10px, 좌우 0px으로 설정 */
+      /*
+    width는 버튼의 크기를 제한합니다.
+    padding은 버튼 내부 텍스트와 경계 사이의 간격을 설정합니다.
+  */
     }
 
+    /* 첫 번째 버튼 스타일: 왼쪽 정렬 */
     button:first-child {
       float: left;
+      /* 버튼을 부모 요소의 왼쪽에 정렬 */
+      /*
+    float: left는 버튼을 부모 요소의 왼쪽 끝에 배치합니다.
+    여러 버튼을 나열할 때 사용됩니다.
+  */
     }
 
+    /* 마지막 버튼 스타일: 오른쪽 정렬 */
     button:last-child {
       float: right;
+      /* 버튼을 부모 요소의 오른쪽에 정렬 */
+      /*
+    float: right는 버튼을 부모 요소의 오른쪽 끝에 배치합니다.
+    양쪽 정렬 버튼 디자인을 구현할 때 유용합니다.
+  */
     }
   </style>
 </head>

@@ -1,53 +1,42 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>position</title>
+    <title>Document</title>
     <style>
-        body {
-            height: 2000px;
+        body{
+            height: 5000px;
         }
-
         /* div 가로세로 100px 테두리 */
-        div {
+        div{
             width: 100px;
             height: 100px;
             border: 1px solid black;
         }
-
         /* 
-            ### **포지션(Position) 속성**
-
-            - position : 요소의 위치 지정 방식을 설정합니다.
-            - static : 기본값으로, 일반적인 문서 흐름에 따라 위치합니다.
-                원래 위치 순서상 자연스럽게 배치
-            - absolute : 요소를 가장 가까운 'relative' 부모 요소를 기준으로 절대 위치시킵니다.
-            - fixed : 요소를 '화면의 특정 위치에 고정'시킵니다. 스크롤해도 움직이지 않습니다.
-            - relative : 요소를 일반적인 위치에서 상대적으로 이동시킵니다.
-                원래 있던 자리를 기준으로 이동
-            - sticky : 특정 스크롤 위치에 도달할 때까지는 `relative`처럼 동작하다가 이후 `fixed`처럼 고정됩니다.
+            position
+                static : 기본값, 원래 위치 순서상 자연스럽게 배치
+                absolute : 부모 요소를 기준으로 이동
+                fixed : 브라우저 기준으로 이동
+                relative : 원래 있던 자리를 기준으로 이동
 
             top, left, right, bottom : 위치를 지정
-         */
-        .absolute {
-            top: 100px;
+        */
+        .absolute{
+            top : 50px;
             left: 100px;
             position: absolute;
         }
-
-        .fixed {
+        .fixed{
             bottom: 100px;
             right: calc(50% - 51px);
             position: fixed;
         }
     </style>
 </head>
-
 <body>
-    <div class="absolute">position <br>absolute 설정</div>
-    <div class="fixed">position <br>fixed 설정</div>
+    <div class="absolute">position absolute 설정</div>
+    <div class="fixed">position fixed 설정</div>
 </body>
-
 </html>
